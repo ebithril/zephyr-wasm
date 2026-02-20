@@ -1,0 +1,81 @@
+<level>	
+	<background picture="../Resources/Gfx/act3SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act3SkyBottomForeground.dds" />
+	<parallaxFix picture="../Resources/Gfx/act3SkyParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act3SkyTopForeground.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief08.dds" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+	<backgroundMusic music="../Resources/Sfx/soundtrack1.mp3" />
+
+	<enemies>
+		<enemy name="Kamikaze" amount="2" xStart="100" yStart="100" xEnd="200" yEnd="200"/>
+		<enemy name="Kamikaze" amount="2" xStart="3000" yStart="300" xEnd="6000" yEnd="600"/>
+		<enemy name="Enemy" amount="10" xStart="2000" yStart="2000" xEnd="4000" yEnd="4000"/>
+		<enemy name="tigerJet" amount="1" xStart="1271" yStart="3358" xEnd="2686" yEnd="4341"/>
+		<enemy name="tigerJet" amount="1" xStart="5781" yStart="3286" xEnd="7532" yEnd="5049"/>
+		<enemy name="lionJet" amount="4" xStart="4000" yStart="4000" xEnd="5000" yEnd="5000"/>
+	</enemies>
+
+	<enemySpawns>
+		<spawn enemyName="Kamikaze" timeBetweenSpawns="8" />
+		<spawn enemyName="tigerJet" timeBetweenSpawns="60" />
+		<spawn enemyName="Enemy" timeBetweenSpawns="5" />
+		<spawn enemyName="Enemy" timeBetweenSpawns="10" />
+		<spawn enemyName="Enemy" timeBetweenSpawns="10" />
+	</enemySpawns>
+
+	<tileObjects>
+		<tileObject name="act3Cloud1" positionX="700" positionY="1900"/>
+		<tileObject name="act3Cloud2" positionX="1000" positionY="3740"/>
+		<tileObject name="act3Cloud3" positionX="840" positionY="5370"/>
+		<tileObject name="act3Cloud1" positionX="2605" positionY="2605"/>
+		<tileObject name="act3Cloud2" positionX="3000" positionY="6000"/>
+		<tileObject name="act3Cloud3" positionX="4480" positionY="5040"/>
+		<tileObject name="act3Cloud1" positionX="6615" positionY="2500"/>
+		<tileObject name="act3Cloud2" positionX="6100" positionY="3200"/>
+		<tileObject name="act3Cloud3" positionX="7000" positionY="6060"/>
+		<tileObject name="act3Cloud1" positionX="2122" positionY="2446"/>
+		<tileObject name="act3Cloud2" positionX="6248" positionY="2410"/>
+		<tileObject name="act3Cloud3" positionX="4173" positionY="6069"/>
+		<tileObject name="act3Cloud1" positionX="1751" positionY="5313"/>
+		<tileObject name="act3Cloud2" positionX="7028" positionY="5949"/>
+		<tileObject name="act3Cloud3" positionX="8156" positionY="3022"/>
+		<tileObject name="act3Cloud1" positionX="23" positionY="5529"/>
+		<tileObject name="act3TurretBaseRuin" positionX="1679" positionY="2522"/>
+		<tileObject name="act3TurretBaseRuin" positionX="6466" positionY="2478"/>
+		<tileObject name="act1TurretBaseHull" positionX="1903" positionY="4577"/>
+		<tileObject name="act1TurretBaseHull" positionX="6424" positionY="4529"/>
+		<tileObject name="act1TurretBaseHull" positionX="2918" positionY="6776"/>
+		<tileObject name="act1TurretBaseHull" positionX="5918" positionY="6776"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="timePassed" text="Survive the new threat" amount="180"/>
+		<objective topic="enemiesKilled" text="Annihilate enemy ships" amount="30"/>
+		<objective topic="turretsDestroyed" text="Destroy the turrets" amount="3"/>
+	</objectives>
+
+	<turrets>
+		<turret name="defaultTurret" positionX="1893" positionY="4432" rotation="0"/>
+		<turret name="defaultTurret" positionX="6414" positionY="4384" rotation="0"/>
+		<turret name="defaultTurret" positionX="1583" positionY="2566" rotation="3.84"/>
+		<turret name="defaultTurret" positionX="6380" positionY="2522" rotation="3.84"/>
+		<turret name="ballTurret" positionX="2914" positionY="6596" rotation="0"/>
+		<turret name="ballTurret" positionX="5914" positionY="6596" rotation="0"/>
+	</turrets>
+
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act3ParallaxBackground2.dds"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act3ParallaxBackground.dds"/>
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act3ParallaxForeground.dds"/>
+	</foregrounds>
+</level>

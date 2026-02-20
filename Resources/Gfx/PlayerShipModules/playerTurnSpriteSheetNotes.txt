@@ -1,0 +1,86 @@
+15...[M]
+[M]...15
+
+Default base ship:
+
+"playerTurnSpriteSheetDefault"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+
+
+Weapons:
+
+"playerTurnSpriteSheetWeaponSpreadshot"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+"playerTurnSpriteSheetWeaponLaser"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+"playerTurnSpriteSheetWeaponHoming"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+
+
+Engines:
+
+"playerTurnSpriteSheetEngineNeedle"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+"playerTurnSpriteSheetEngineHawk"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+"playerTurnSpriteSheetEngineBauble"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+
+Heads:
+
+"playerTurnSpriteSheetHeadHammer"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---
+"playerTurnSpriteSheetHeadShield"
+Sprite sheet total size:   128x 128px.
+Each separate sprite size:  128x  128px.
+Number of frames: 1.
+Frames per row: 1.
+
+---
+"playerTurnSpriteSheetHeadCloud"
+Sprite sheet total size:   2048x 256px.
+Each separate sprite size:  128x  128px.
+Number of frames: 32.
+Frames per row: 16.
+
+---

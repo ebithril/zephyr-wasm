@@ -1,0 +1,57 @@
+<!--
+	defaultCore
+	defaultWeapon
+	defaultEngine
+	position
+-->
+
+<player>
+	<position x="5000" y="8000"/>
+	<defaultWeapon id="superMachineGun"/>
+	<defaultEngine id="test"/>
+	<defaultCockpit id="standard"/>
+	<regenrate rate="3" />
+
+
+	<texture file="../Resources/Gfx/playerTurnSpriteSheet.dds"/>
+	<spriteSheet sizeX="2048" sizeY="256">
+		<animation id="turn" nrFrames="32" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" />
+	</spriteSheet>
+	<exhaust>
+		<exhaustActive>
+			<texture file="../Resources/Gfx/playerExhaustNeedleSpriteSheet.dds"/>
+			<spriteSheet sizeX="512" sizeY="128">
+				<animation id="Exhaust" nrFrames="8" spriteSizeX="64" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12"/>
+			</spriteSheet>
+		</exhaustActive>
+		<exhaustBoost>
+			<texture file="../Resources/Gfx/playerExhaustBoostNeedleSpriteSheet.dds"/>
+			<spriteSheet sizeX="1024" sizeY="128">
+				<animation id="ExhaustBoost" nrFrames="3" spriteSizeX="256" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
+			</spriteSheet>
+		</exhaustBoost>
+		<exhaustEnd>
+			<texture file="../Resources/Gfx/playerExhaustEndNeedleSpriteSheet.dds"/>
+			<spriteSheet sizeX="512" sizeY="128">
+				<animation id="ExhaustEnd" nrFrames="3" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
+			</spriteSheet>
+		</exhaustEnd>
+		<exhaustEmitter id="playerExhaust"/>
+	</exhaust>
+
+	<damageFeedback>
+		<particle id="playerhurt"/>
+		<scale>
+			<delay smokeLowestFrequency="0.2" smokeFrequencyScale="0.1"/> 
+			<amount minDensity="2" scaleDensity="10" />
+			<startSize minX="14" minY="14" scaleX="14" scaleY="14"/>
+			<deltaSize minX="25" minY="25" scaleX="-1" scaleY="-1"/>
+			<speedMin min="100" scale="50"/>
+			<alphaStart min="100" scale="150"/>
+			<maxLifeTime min="0.5" scale="0.6"/>
+			<amount min="1" scale="2"/>
+			<delay min="0.008" scale="0.005"/>
+		</scale>
+	</damageFeedback>
+	<collisionKnockback seconds="0.12"/>
+</player>

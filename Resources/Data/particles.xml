@@ -1,0 +1,175 @@
+<!--  OBS! directionx och directiony i emitter ska sammanlagt bli 1 -->
+
+<root>
+	<particlesystem>
+		<emitter id="playerhurt" isInWorldSpace="true" isUsingLocalRotation="false">
+			<delay seconds="0.001"/>
+			<amount nr="2"/>
+			<lifetime seconds="-1"/>
+			<gravity amount="-100" isaffected="true"/>
+			<direction x="0" y="-1"/>
+			<spread radian="-0.1"/>
+			<airResistance resist="1"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="30" y="30"/>
+			<deltasize x="1" y="1"/>
+			<speed min="20" max="40"/>
+			<alpha start="255" delta="20"/>
+			<lifetime min="0.5" max="1"/>
+		</particles>
+	</particlesystem>
+	
+	<particlesystem>
+		<emitter id="playerExhaust" isInWorldSpace="true" isUsingLocalRotation="true">
+			<delay seconds="0"/>
+			<amount nr="1"/>
+			<lifetime seconds="-1"/>
+			<gravity amount="200" isaffected="false"/>
+			<direction x="0" y="1"/>
+			<spread radian="0"/>
+			<airResistance resist="28"/>
+			<sprite dir="../Resources/Gfx/playerExhaustParticle.png" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="2" y="10"/>
+			<deltasize x="1" y="1"/>
+			<speed min="0" max="0"/>
+			<alpha start="255" delta="20"/>
+			<lifetime min="0.2" max="0.2"/>
+		</particles>
+	</particlesystem>
+
+	
+	<particlesystem>
+		<emitter id="enemyExhaust" isInWorldSpace="true" isUsingLocalRotation="true">
+			<delay seconds="0"/>
+			<amount nr="1"/>
+			<lifetime seconds="-1"/>
+			<gravity amount="200" isaffected="false"/>
+			<direction x="0" y="1"/>
+			<spread radian="0"/>
+			<airResistance resist="28"/>
+			<sprite dir="../Resources/Gfx/enemyExhaustParticle.png" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="4" y="25"/>
+			<deltasize x="1" y="1"/>
+			<speed min="5300" max="5300"/>
+			<alpha start="255" delta="20"/>
+			<lifetime min="0.2" max="0.2"/>
+		</particles>
+	</particlesystem>
+
+	
+	<!--explosionDebris-->
+	<particlesystem>
+		<emitter id="explosionDebris" isInWorldSpace="true" isUsingLocalRotation="false">
+			<delay seconds="0.05"/>
+			<amount nr="10"/>
+			<lifetime seconds="0.06"/>
+			<gravity amount="150" isaffected="true"/>
+			<direction x="0" y="1"/>
+			<spread radian="0.3"/>
+			<airResistance resist="0"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackRectangle.dds" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="13" y="13"/>
+			<deltasize x="7" y="7"/>
+			<speed min="150" max="200"/>
+			<alpha start="255" delta="20"/>
+			<lifetime min="0.5" max="2"/>
+		</particles>
+	</particlesystem>
+	
+	
+	<!--explosion-->
+	<particlesystem>
+		<emitter id="explosion" isInWorldSpace="true" isUsingLocalRotation="false">
+			<delay seconds="0.015"/>
+			<amount nr="25"/>
+			<lifetime seconds="0.020"/>
+			<gravity amount="150" isaffected="false"/>
+			<direction x="0" y="1"/>
+			<spread radian="6.22"/>
+			<airResistance resist="2"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="13" y="13"/>
+			<deltasize x="5" y="5"/>
+			<speed min="150" max="200"/>
+			<alpha start="255" delta="20"/>
+			<lifetime min="0.5" max="2"/>
+		</particles>
+	</particlesystem>
+	
+	
+	<!--playerHurtBadly-->
+	<particlesystem>
+		<emitter id="kim" isInWorldSpace="true" isUsingLocalRotation="false">
+			<delay seconds="0.055"/>
+			<amount nr="2"/>
+			<lifetime seconds="-1"/>
+			<gravity amount="-100" isaffected="true"/>
+			<direction x="0" y="-1"/>
+			<spread radian="-0.1"/>
+			<airResistance resist="1"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="28" y="28"/>
+			<deltasize x="24" y="24"/>
+			<speed min="150" max="200"/>
+			<alpha start="255" delta="0"/>
+			<lifetime min="0.2" max="1.1"/>
+		</particles>
+	</particlesystem>
+	
+	
+	<!--playerHurtLightly-->
+	<particlesystem>
+		<emitter id="" isInWorldSpace="true" isUsingLocalRotation="false">
+			<delay seconds="0.055"/>
+			<amount nr="2"/>
+			<lifetime seconds="-1"/>
+			<gravity amount="-100" isaffected="true"/>
+			<direction x="0" y="-1"/>
+			<spread radian="-0.1"/>
+			<airResistance resist="1"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="14" y="14"/>
+			<deltasize x="25" y="25"/>
+			<speed min="100" max="200"/>
+			<alpha start="255" delta="0"/>
+			<lifetime min="0.2" max="0.5"/>
+		</particles>
+	</particlesystem>
+	
+	
+	<!--enemyBulletDies-->
+	<particlesystem>
+		<emitter id="bulletDeath" isInWorldSpace="true" isUsingLocalRotation="false">
+			<delay seconds="0.015"/>
+			<amount nr="15"/>
+			<lifetime seconds="0.02"/>
+			<gravity amount="-100" isaffected="false"/>
+			<direction x="0" y="-1"/>
+			<spread radian="6.28"/>
+			<airResistance resist="1.5"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackDiamond.dds" sizex="64" sizey="64"/>
+		</emitter>
+		<particles>
+			<startsize x="12" y="12"/>
+			<deltasize x="7" y="7"/>
+			<speed min="30" max="50"/>
+			<alpha start="255" delta="20"/>
+			<lifetime min="0.5" max="2"/>
+		</particles>
+	</particlesystem>
+
+</root>

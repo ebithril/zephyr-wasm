@@ -1,0 +1,68 @@
+<level>
+	<background picture="../Resources/Gfx/act1SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act1SkyBottomForeground.dds" />
+	<parallaxFix picture="../Resources/Gfx/act1SkyParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act1SkyTopForeground.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief03.dds" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+	<backgroundMusic music="../Resources/Sfx/kamikazeSoundtrack.mp3" />
+
+	<enemies>
+		<enemy name="Kamikaze" amount="1" xStart="635" yStart="1535" xEnd="735" yEnd="1635"/>
+		<enemy name="Kamikaze" amount="1" xStart="7328" yStart="1571" xEnd="7428" yEnd="1671"/>
+		<enemy name="Kamikaze" amount="1" xStart="6800" yStart="6980" xEnd="6900" yEnd="7080"/>
+		<enemy name="Kamikaze" amount="1" xStart="4113" yStart="4030" xEnd="4213" yEnd="4130"/>
+		<enemy name="Enemy" amount="6" xStart="2000" yStart="2000" xEnd="4000" yEnd="4000"/>
+		<enemy name="Enemy" amount="6" xStart="7000" yStart="4000" xEnd="7500" yEnd="7000"/>
+	</enemies>
+
+	<enemySpawns>
+		<spawn enemyName="Kamikaze" timeBetweenSpawns="8" />
+		<spawn enemyName="Kamikaze" timeBetweenSpawns="8" />
+		<spawn enemyName="Enemy" timeBetweenSpawns="5" />
+	    <spawn enemyName="Enemy" timeBetweenSpawns="5" />
+	</enemySpawns>
+	
+	<tileObjects>
+		<tileObject name="act1Cloud3" positionX="944" positionY="1712"/>
+		<tileObject name="act1Cloud2" positionX="6368" positionY="1872"/>
+		<tileObject name="act1Cloud1" positionX="6672" positionY="4512"/>
+		<tileObject name="act1Cloud3" positionX="7024" positionY="6544"/>
+		<tileObject name="act1Cloud2" positionX="992" positionY="6624"/>
+		<tileObject name="act1Cloud1" positionX="1152" positionY="4224"/>
+		<tileObject name="act1Cloud2" positionX="4368" positionY="5632"/>
+		<tileObject name="act1Cloud3" positionX="4112" positionY="2304"/>
+		<tileObject name="act1Cloud1" positionX="4468" positionY="2315"/>
+		<tileObject name="act1Cloud3" positionX="4000" positionY="2299"/>
+		<tileObject name="act1TurretBaseRuin" positionX="4020" positionY="1755"/>
+		<tileObject name="act1TurretBaseHull" positionX="6992" positionY="7152"/>
+		<tileObject name="act1TurretBaseHull" positionX="1568" positionY="7504"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="timePassed" text="Survive the kamikazes" amount="120"/>
+		<objective topic="enemiesKilled" text="Eliminate enemy ships" amount="30"/>
+	</objectives>
+
+	<turrets>
+		<turret name="defaultTurret" positionX="6978" positionY="6995" rotation="0"/>
+		<turret name="defaultTurret" positionX="1554" positionY="7354" rotation="0"/>
+		<turret name="defaultTurret" positionX="3934" positionY="1799" rotation="3.84"/>
+		
+	</turrets>
+
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act1ParallaxBackground2.dds"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act1ParallaxBackground.dds"/>
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act1ParallaxForeground.dds"/>
+	</foregrounds>
+</level>

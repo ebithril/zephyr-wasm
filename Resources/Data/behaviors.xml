@@ -1,0 +1,4 @@
+<behaviors>
+	<attacker detectionRadius="2250" hoverRadius="250" rotationError="0.1" />
+	<kamikaze detectionRadius="5000" hoverRadius="0" rotationError="0" />
+</behaviors>

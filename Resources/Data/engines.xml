@@ -1,0 +1,21 @@
+<engines>
+
+<!--Player engine start-->
+
+	<engine id = "test" accelerationForce = "3000" normalTurnRate = "0.8" acceleratingTurnRate = "0.25" maxSpeed = "850" affectedByPhysics="1"/>
+	<engine id = "jetEngine" accelerationForce = "3000" normalTurnRate = "0.8" acceleratingTurnRate = "0.2" maxSpeed = "1000" affectedByPhysics="1"/>
+	<engine id = "gliderEngine" accelerationForce = "3000" normalTurnRate = "0.8" acceleratingTurnRate = "0.65" maxSpeed = "680" affectedByPhysics="1"/>
+	<engine id = "gravEngine" accelerationForce = "3000" normalTurnRate = "0.8" acceleratingTurnRate = "0.4" maxSpeed = "750" affectedByPhysics="0.25"/>
+	
+<!--Player engine end-->
+
+
+<!--Enemy engine start-->
+	<engine id = "enemyEngine" accelerationForce = "1000" normalTurnRate = "1" acceleratingTurnRate = "0.5" maxSpeed = "600" affectedByPhysics="1"/>
+	<engine id = "kamikaze" accelerationForce = "2000" normalTurnRate = "0.1" acceleratingTurnRate = "0.1" maxSpeed = "1300" affectedByPhysics="1"/>
+	<engine id = "lionEnmgine" accelerationForce = "3000" normalTurnRate = "1" acceleratingTurnRate = "0.1" maxSpeed = "555" affectedByPhysics="1"/>
+	<engine id = "tigerEnmgine" accelerationForce = "3000" normalTurnRate = "0.15" acceleratingTurnRate = "0.1" maxSpeed = "300" affectedByPhysics="1"/>
+	<engine id = "gliderEngine" accelerationForce = "3000" normalTurnRate = "0.8" acceleratingTurnRate = "0.65" maxSpeed = "680" affectedByPhysics="1"/>
+<!--Enemy engine end-->
+	
+</engines>

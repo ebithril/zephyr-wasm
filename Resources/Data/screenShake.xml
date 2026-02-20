@@ -1,0 +1,14 @@
+<root>
+	<screenShake name="enemyKilled" magnitude="4" length="0.2" />
+	<screenShake name="turretKilled" magnitude="4" length="0.4" />
+	<screenShake name="playerColliding" magnitude="4" length="0.3" />
+	<screenShake name="bulletHittingEnemy" magnitude="3" length="0.2" />
+	<screenShake name="playerHitByBullet" magnitude="5" length="0.3" />
+	<screenShake name="bulletHittingTile" magnitude="2" length="0.2" />
+	<screenShake name="bulletHittingTurret" magnitude="3" length="0.2" />
+	<screenShake name="bulletHittingObjective" magnitude="3" length="0.2" />
+	<screenShake name="objectiveKilled" magnitude="10" length="0.9" />
+	<screenShake name="playerDied" magnitude="5" length="0.4" />
+	<screenShake name="playerStartingEngine" magnitude="3" length="0.2" />
+	<screenShake name="playerShooting" magnitude="2" length="0.2" />
+</root>

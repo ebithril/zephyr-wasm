@@ -1,0 +1,6 @@
+<objectiveTarget>
+	<size width="1024" height="1024" colliderWidth="700" colliderHeight="700"/>
+	<animation spriteSheet="../resources/gfx/ObjectiveTargets/satellite.dds" width="512" height="512" fileWidth="512" fileHeight="512" spriteWidth="512" spriteHeight="512" numberOfFrames="1" fps="0"/>
+	<sprite destroyedSprite="../resources/gfx/ObjectiveTargets/coreDestroyed.dds"/>
+	<stats collisionDps="45" hp="1000"/>
+</objectiveTarget>

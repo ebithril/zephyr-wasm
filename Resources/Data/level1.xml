@@ -1,0 +1,59 @@
+<level>
+	<background picture="../Resources/Gfx/act1SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act1SkyBottomForeground.dds" />
+	<parallaxFix picture="../Resources/Gfx/act1SkyParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act1SkyTopForeground.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief01.dds" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+	<backgroundMusic music="../Resources/Sfx/soundtrack1.mp3" />
+
+	<enemies>
+		<enemy name="Enemy" amount="10" xStart="520" yStart="1504" xEnd="3648" yEnd="2768"/>
+		<enemy name="Enemy" amount="10" xStart="5080" yStart="1608" xEnd="6800" yEnd="3536"/>
+		
+	</enemies>
+	
+	<enemySpawns>
+		<spawn enemyName="Enemy" timeBetweenSpawns="5" />
+	</enemySpawns>
+
+	<tileObjects>
+		<tileObject name="act1Cloud1" positionX="1220" positionY="2206"/>
+		<tileObject name="act1Cloud3" positionX="6893" positionY="2148"/>
+		<tileObject name="act1Cloud2" positionX="3983" positionY="3407"/>
+		<tileObject name="act1Cloud3" positionX="2282" positionY="6209"/>
+		<tileObject name="act1Cloud2" positionX="5980" positionY="6239"/>
+		<tileObject name="act1Cloud3" positionX="1234" positionY="3483"/>
+		<tileObject name="act1Cloud2" positionX="3781" positionY="4342"/>
+		<tileObject name="act1Cloud3" positionX="7531" positionY="7314"/>
+		<tileObject name="act1Cloud2" positionX="8142" positionY="3786"/>
+		<tileObject name="act1TurretBaseHull" positionX="1910" positionY="4593"/>
+		<tileObject name="act1TurretBaseHull" positionX="6431" positionY="4545"/>
+		<tileObject name="act1TurretBaseRuin" positionX="4444" positionY="3974"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="enemiesKilled" text="Destroy enemy ships" amount="25"/>
+	</objectives>
+	
+	<turrets>
+		<turret name="defaultTurret" positionX="1903" positionY="4432" rotation="0"/>
+		<turret name="defaultTurret" positionX="6424" positionY="4384" rotation="0"/>
+		<turret name="defaultTurret" positionX="4338" positionY="4010" rotation="3.84"/>
+	</turrets>
+
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act1ParallaxBackground2.dds"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act1ParallaxBackground.dds"/>
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act1ParallaxForeground.dds"/>
+	</foregrounds>
+</level>

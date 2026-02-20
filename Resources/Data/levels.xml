@@ -1,0 +1,77 @@
+<levels>
+	<level xmlPath="../Resources/Data/level0.xml" title="Out of the Blue" previewpicture="../Resources/Gfx/LevelSelect/actOne.dds">
+A strange scent carries on the
+breeze -- the stink of smoke.
+Take wing and investigate.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission00off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission00hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission00on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level1.xml" title="Reed before the Wind" previewpicture="../Resources/Gfx/LevelSelect/actOne.dds">
+This foe is of brass and fire.
+But the west wind is at your back,
+and they will fall before us.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission01off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission01hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission01on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level2.xml" title="Fire with Fire" previewpicture="../Resources/Gfx/LevelSelect/actOne.dds">
+Their ships are corroded from smog.
+Pierce the Foe&apos;s soot-black hulls,
+and stab at their hearts.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission02off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission02hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission02on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level3.xml" title="Weather the Storm" previewpicture="../Resources/Gfx/LevelSelect/actOne.dds">
+Suicidal Foe pilots mean to
+drag you down to the grave.
+Survive their onslaught.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission03off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission03hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission03on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level4.xml" title="Zone of Danger" previewpicture="../Resources/Gfx/LevelSelect/actOne.dds">
+They choke the skies with
+smoke and gunpowder.
+Rip out their hearts.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission04off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission04hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission04on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level5.xml" title="An ill Wind" previewpicture="../Resources/Gfx/LevelSelect/actTwo.dds">
+The very air carries a greenish
+tint, yet they cling to it madly.
+Tear down their defenses.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission05off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission05hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission05on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level6.xml" title="Skyfall" previewpicture="../Resources/Gfx/LevelSelect/actTwo.dds">
+Not even the edge of the sky
+seems a limit to their greed.
+Their satellites must fall.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission06off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission06hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission06on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level7.xml" title="Leviathan" previewpicture="../Resources/Gfx/LevelSelect/actTwo.dds">
+The Foe has set in motion the
+full might of their military machine.
+Slay this monstrosity.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission07off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission07hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission07on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level8.xml" title="Skies on Fire" previewpicture="../Resources/Gfx/LevelSelect/actThree.dds">
+Missiles fill the smog-ridden sky
+like gnats.
+Destroy their droning hosts.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission08off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission08hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission08on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level9.xml" title="The Sun in Chains" previewpicture="../Resources/Gfx/LevelSelect/actThree.dds">
+Foe pilots swarm like piranha.
+They must be growing desperate.
+Break through.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission09off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission09hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission09on.dds"/>
+	</level>
+	
+	<level xmlPath="../Resources/Data/level10.xml" title="Mighty Oaks do Fall" previewpicture="../Resources/Gfx/LevelSelect/actThree.dds">
+That dark mass on the horizon...
+That&apos;s no moon.
+<button normalsprite="../Resources\Gfx\Icons\missions/mission10off.dds" hoversprite="../Resources\Gfx\Icons\missions/mission10hover.dds" activesprite="../Resources\Gfx\Icons\missions/mission10on.dds"/>
+	</level>
+</levels>

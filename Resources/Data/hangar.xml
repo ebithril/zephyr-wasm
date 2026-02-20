@@ -1,0 +1,88 @@
+<!--
+
+-->
+
+<hangar>
+	<properties sprite="../Resources/Gfx/backgroundLevel1BGWIP_ben.jpg" lockedslotsprite="../Resources/Gfx/Icons/HangarSlots/lockedPartoff.dds" buttonsizex="64" buttonsizey="64"/>
+	
+	<weapons>
+	
+		<slot weaponid="superMachineGun" normalsprite="../Resources/Gfx/Icons/HangarSlots/wingPart00off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/wingPart00hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/wingPart00on.dds" description="
+STEAM CANNON
+Versatile repeater firing
+superheated gouts of steam." levelindex="0"/>
+
+
+		<slot weaponid="spreadShotMonster2000" normalsprite="../Resources/Gfx/Icons/HangarSlots/wingPart01off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/wingPart01hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/wingPart01on.dds" description="
+CLOUDBURST
+Fires an arc of
+pressurized projectiles." levelindex="0"/>
+
+
+		<slot weaponid="homingClusters" normalsprite="../Resources/Gfx/Icons/HangarSlots/wingPart03off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/wingPart03hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/wingPart03on.dds" description="
+HOMING PIGEONS
+Loose a flock of birds to terrorize the Foe,
+beak and claw." levelindex="3"/>
+
+
+		<slot weaponid="miniGun" normalsprite="../Resources/Gfx/Icons/HangarSlots/wingPart02off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/wingPart02hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/wingPart02on.dds" description="
+TORRENT MK I
+Prototype minigun looted
+from a Foe ship."levelindex="6"/>
+
+	</weapons>
+	
+	
+	<cockpits>
+	
+		<slot cockpitid="standard" normalsprite="../Resources/Gfx/Icons/HangarSlots/headPart00off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/headPart00hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/headPart00on.dds" description="
+WINDSHIELD
+Good all-round cockpit." levelindex="0"/>
+
+
+		<slot cockpitid="ramming" normalsprite="../Resources/Gfx/Icons/HangarSlots/headPart01off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/headPart01hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/headPart01on.dds" description="
+THUNDERHEAD
+Take less ramming damage. More health,
+but regeneration is slower." levelindex="1"/>
+
+
+		<slot cockpitid="airResistance" normalsprite="../Resources/Gfx/Icons/HangarSlots/headPart03off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/headPart03hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/headPart03on.dds" description="
+AEROFOIL
+Lower air resistance." levelindex="4"/>
+
+
+		<slot cockpitid="shield" normalsprite="../Resources/Gfx/Icons/HangarSlots/headPart02off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/headPart02hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/headPart02on.dds" description="
+NIMBUS
+Increased regeneration speed.
+Less ramming resistance." levelindex="7"/>
+
+	</cockpits>
+	
+	
+	<engines>
+	
+		<slot engineid="test" normalsprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart00off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart00hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart00on.dds" description="
+STEAM JET
+Average speed
+and maneuverability." levelindex="0"/>
+
+
+		<slot engineid="jetEngine" normalsprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart01off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart01hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart01on.dds" description="
+LANCET
+Focusing nozzle for rocketing speed,
+but lessened turn rate." levelindex="2"/>
+
+
+		<slot engineid="gliderEngine" normalsprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart02off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart02hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart02on.dds" description="
+PENNON
+Rudders in the exhaust stream give greater
+maneuverability, at the cost of speed." levelindex="5"/>
+		
+		
+		<slot engineid="gravEngine" normalsprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart03off.dds" hoversprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart03hover.dds" activesprite="../Resources/Gfx/Icons/HangarSlots/exhaustPart03on.dds" description="
+LANTERN
+Full of strange machinery that appears to counteract 
+gravity. Or maybe there's a djinn in there?" levelindex="8"/>
+
+	</engines>
+</hangar>

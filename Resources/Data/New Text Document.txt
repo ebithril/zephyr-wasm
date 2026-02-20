@@ -1,0 +1,56 @@
+<level>
+<!--Credits level?-->
+	<background picture="../Resources/Gfx/act3SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act3SkyBottomForeground.dds" />
+	<bottomParallaxFix picture="../Resources/Gfx/act3SkyBottomParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act3SkyTopForeground.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+
+	<enemies>
+		<enemy name="Kamikaze" amount="1" xStart="100" yStart="100" xEnd="200" yEnd="200"/>
+		<enemy name="Kamikaze" amount="1" xStart="3000" yStart="300" xEnd="6000" yEnd="600"/>
+		<enemy name="Enemy" amount="4" xStart="2000" yStart="2000" xEnd="4000" yEnd="4000"/>
+		<enemy name="Enemy" amount="3" xStart="7000" yStart="4000" xEnd="7500" yEnd="7000"/>
+		<enemy name="lionJet" amount="1" xStart="4000" yStart="4000" xEnd="5000" yEnd="5000"/>
+	</enemies>
+
+	<enemySpawns>
+		<spawn enemyName="tigerJet" timeBetweenSpawns="25" />
+		<spawn enemyName="lionJet" timeBetweenSpawns="20" />
+		<spawn enemyName="Kamikaze" timeBetweenSpawns="15" />
+		<spawn enemyName="Enemy" timeBetweenSpawns="5" />
+	</enemySpawns>
+
+	<tileObjects>
+		<tileObject name="act3Cloud1" positionX="2000" positionY="5000"/>
+		<tileObject name="act3Cloud2" positionX="4000" positionY="4000"/>
+		<tileObject name="act3Cloud3" positionX="8000" positionY="4000"/>
+		<tileObject name="act3Cloud1" positionX="2500" positionY="6500"/>
+		<tileObject name="act3Cloud2" positionX="8000" positionY="3500"/>
+		<tileObject name="act3Cloud3" positionX="1000" positionY="4500"/>
+		<tileObject name="act1TurretBaseHull" positionX="1903" positionY="4577"/>
+		<tileObject name="act1TurretBaseHull" positionX="6424" positionY="4529"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="enemiesKilled" text="Destroy all enemies" amount="30"/>
+	</objectives>
+
+	<turrets>
+		<turret name="defaultTurret" positionX="1893" positionY="4432" rotation="0"/>
+		<turret name="defaultTurret" positionX="6414" positionY="4384" rotation="0"/>
+		<turret name="defaultTurret" positionX="1583" positionY="2566" rotation="3.14"/>
+		<turret name="defaultTurret" positionX="6380" positionY="2602" rotation="3.14"/>
+	</turrets>
+
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act3ParallaxBackground.dds"/>
+		<parallax relativeSpeed="0.2" texture="../Resources/Gfx/act3ParallaxBackground2.dds"/>
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.5" texture="../Resources/Gfx/act3ParallaxForeground.dds"/>
+	</foregrounds>
+</level>

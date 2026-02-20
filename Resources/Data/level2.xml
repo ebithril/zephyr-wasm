@@ -1,0 +1,70 @@
+<level>
+	<background picture="../Resources/Gfx/act1SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act1SkyBottomForeground.dds" />
+	<parallaxFix picture="../Resources/Gfx/act1SkyParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act1SkyTopForeground.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief02.dds" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+	<backgroundMusic music="../Resources/Sfx/soundtrack2.mp3" />
+
+	<enemies>
+		<enemy name="Enemy" amount="6" xStart="239" yStart="1187" xEnd="2086" yEnd="1190"/>
+		<enemy name="Enemy" amount="6" xStart="6560" yStart="1187" xEnd="7820" yEnd="1190"/>
+		<enemy name="Enemy" amount="6" xStart="59" yStart="911" xEnd="8156" yEnd="1823"/>
+	</enemies>
+
+	<enemySpawns>
+		<spawn enemyName="Enemy" timeBetweenSpawns="7"/>
+		<spawn enemyName="Enemy" timeBetweenSpawns="7"/>
+	</enemySpawns>
+
+	<tileObjects>
+		<tileObject name="act1Cloud1" positionX="2300" positionY="2160"/>
+		<tileObject name="act1Cloud2" positionX="6220" positionY="2600"/>
+		<tileObject name="act1Cloud3" positionX="1320" positionY="4664"/>
+		<tileObject name="act1Cloud1" positionX="6400" positionY="5200"/>
+		<tileObject name="act1Cloud2" positionX="3300" positionY="5360"/>
+		<tileObject name="act1Cloud2" positionX="6220" positionY="2600"/>
+		<tileObject name="act1Cloud3" positionX="6782" positionY="2664"/>
+		<tileObject name="act1Cloud1" positionX="2400" positionY="5200"/>
+		<tileObject name="act1TurretBaseRuin" positionX="5386" positionY="2566"/>
+		<tileObject name="act1TurretBaseRuin" positionX="3086" positionY="2266"/>
+		<tileObject name="act1TurretBaseHull" positionX="2000" positionY="5045"/>
+		<tileObject name="act1TurretBaseHull" positionX="5400" positionY="5545"/>
+		<tileObject name="act1Boss" positionX="4064" positionY="3424"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="enemiesKilled" text="Destroy enemy ships" amount="25"/>
+		<objective topic="objectiveTargetsDestroyed" text="Eliminate the floating factories" amount="2"/>
+	</objectives>
+
+	<objectiveTargets>
+	    <objectiveTarget name="defaultObjectiveTarget" x="4044" y="3626" rotation="0"/>
+	    <objectiveTarget name="defaultObjectiveTarget" x="4457" y="3758" rotation="0"/>
+    </objectiveTargets>
+	
+
+	<turrets>
+		<turret name="bossTurret" positionX="3600" positionY="3430" rotation="0"/>
+		<turret name="defaultTurret" positionX="1990" positionY="4890" rotation="0"/>
+		<turret name="defaultTurret" positionX="5390" positionY="5390" rotation="0"/>
+		<turret name="defaultTurret" positionX="5490" positionY="2590" rotation="2.04"/>
+		<turret name="defaultTurret" positionX="3000" positionY="2310" rotation="3.84"/>
+	</turrets>
+	
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act1ParallaxBackground2.dds"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act1ParallaxBackground.dds"/>
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act1ParallaxForeground.dds"/>
+	</foregrounds>
+</level>

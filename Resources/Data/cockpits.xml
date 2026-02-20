@@ -1,0 +1,28 @@
+<cockpits>
+<!--Player cockpit start-->
+
+	<cockpit id="standard" maxHealth="150" regenerationRate="30" collisionDamageImpact="1" airRes="1.0" />
+	
+	<cockpit id="ramming" maxHealth="160" regenerationRate="10" collisionDamageImpact="0.4" airRes="1.1" />
+	
+	<cockpit id="airResistance" maxHealth="120" regenerationRate="30" collisionDamageImpact="1.0" airRes="0.3" />
+	
+	<cockpit id="shield" maxHealth="50" regenerationRate="15" collisionDamageImpact="1.3" airRes="1.0" >
+		<shield maxHealth="90" regenerationRate="25" downtime="5" texture="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadShield.dds"/>
+	</cockpit>
+	
+<!--Player cockpit end-->
+
+
+<!--Enemy cockpit start-->
+
+	<cockpit id="enemyCockpit" maxHealth="100" regenerationRate="0" collisionDamageImpact="1" airRes="1" />
+	
+	<cockpit id="enemyCockpit2" maxHealth="80" regenerationRate="0" collisionDamageImpact="1" airRes="1" />
+	
+	<cockpit id="enemyCockpit3" maxHealth="200" regenerationRate="0" collisionDamageImpact="1" airRes="1" />
+	
+	<cockpit id="enemyCockpit4" maxHealth="1750" regenerationRate="0" collisionDamageImpact="1" airRes="1" />
+	
+<!--Enemy cockpit end-->
+</cockpits>

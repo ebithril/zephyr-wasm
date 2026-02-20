@@ -1,0 +1,87 @@
+<level>
+	<background picture="../Resources/Gfx/act3SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act3SkyBottomForeground.dds" />
+	<parallaxFix picture="../Resources/Gfx/act3SkyParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act3SkyTopForeground.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief10.dds" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+	<backgroundMusic music="../Resources/Sfx/bossSoundtrack.mp3" />
+
+	<enemies>
+		<enemy name="Kamikaze" amount="2" xStart="6600" yStart="1691" xEnd="6800" yEnd="1791"/>
+		<enemy name="Kamikaze" amount="2" xStart="1419" yStart="1691" xEnd="1519" yEnd="1791"/>
+		<enemy name="Enemy" amount="8" xStart="455" yStart="1115" xEnd="7892" yEnd="2794"/>
+		<enemy name="tigerJet" amount="2" xStart="1003" yStart="3243" xEnd="7074" yEnd="4098"/>
+		<enemy name="Enemy" amount="6" xStart="1003" yStart="3243" xEnd="7074" yEnd="5598"/>
+	</enemies>
+
+	<enemySpawns>
+		<spawn enemyName="lionJet" timeBetweenSpawns="25" />
+		<spawn enemyName="Kamikaze" timeBetweenSpawns="15" />
+		<spawn enemyName="tigerJet" timeBetweenSpawns="70" />
+	</enemySpawns>
+
+	<tileObjects>
+		
+		<tileObject name="act3Cloud1" positionX="6615" positionY="2500"/>
+		<tileObject name="act3Cloud2" positionX="6100" positionY="3200"/>
+		<tileObject name="act3Cloud3" positionX="7000" positionY="6060"/>
+		<tileObject name="act3Cloud1" positionX="2122" positionY="2446"/>
+		<tileObject name="act3Cloud2" positionX="6248" positionY="2410"/>
+		<tileObject name="act3Cloud3" positionX="4173" positionY="6069"/>
+		<tileObject name="act3Cloud1" positionX="1751" positionY="5313"/>
+		<tileObject name="act3Cloud2" positionX="7028" positionY="5949"/>
+		<tileObject name="act3Cloud3" positionX="8156" positionY="3022"/>
+		<tileObject name="act3Cloud1" positionX="23" positionY="5529"/>
+		<tileObject name="act3Cloud1" positionX="1305" positionY="5605"/>
+		<tileObject name="act3Cloud2" positionX="5930" positionY="5850"/>
+		<tileObject name="act3Cloud3" positionX="7930" positionY="4420"/>
+		<tileObject name="act3Cloud1" positionX="7777" positionY="2515"/>
+		<tileObject name="act3TurretBaseRuin" positionX="363" positionY="2901"/>
+		<tileObject name="act3TurretBaseRuin" positionX="7682" positionY="1901"/>
+		<tileObject name="act3Boss" positionX="4500" positionY="3000"/>
+		<tileObject name="act1TurretBaseHull" positionX="2903" positionY="5577"/>
+		<tileObject name="act1TurretBaseHull" positionX="6424" positionY="5529"/>
+		<tileObject name="act1TurretBaseHull" positionX="2901" positionY="7125"/>
+		<tileObject name="act1TurretBaseHull" positionX="6728" positionY="7233"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="objectiveTargetsDestroyed" text="Annihilate the floating fortress" amount="1"/>
+	</objectives>
+
+	<objectiveTargets>
+		<objectiveTarget name="bigCoreObjective" x="4465" y="2370" rotation="270"/>
+    </objectiveTargets>
+
+	<turrets>
+		<turret name="bossTurret" positionX="5320" positionY="2900" rotation="0"/>
+		<turret name="bossTurret" positionX="3630" positionY="2900" rotation="0"/>
+		<turret name="bossTurret" positionX="5105" positionY="2565" rotation="0"/>
+		<turret name="defaultTurret" positionX="2893" positionY="6970" rotation="0"/>
+		<turret name="ballTurret" positionX="2893" positionY="5402" rotation="0"/>
+		<turret name="ballTurret" positionX="6414" positionY="5354" rotation="0"/>
+		<turret name="defaultTurret" positionX="6718" positionY="7078" rotation="0"/>
+		<turret name="defaultTurret" positionX="467" positionY="2945" rotation="2.04"/>
+		<turret name="defaultTurret" positionX="7596" positionY="1945" rotation="3.84"/>
+		<turret name="ballTurret" positionX="4120" positionY="3200" rotation="8.14"/>
+		<turret name="ballTurret" positionX="4600" positionY="2820" rotation="4.14"/>
+		<turret name="ballTurret" positionX="4750" positionY="3200" rotation="4.14"/>
+	</turrets>
+
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act3ParallaxBackground.dds"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act3ParallaxBackground.dds"/>
+	
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act3ParallaxForeground.dds"/>
+	</foregrounds>
+</level>

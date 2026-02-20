@@ -1,0 +1,79 @@
+<level>
+	<background picture="../Resources/Gfx/act3SkyBackground.dds" />
+	<bottomForeground picture="../Resources/Gfx/act3SkyBottomForeground.dds" />
+	<parallaxFix picture="../Resources/Gfx/act3SkyParallaxFix.dds" />
+	<topForeground picture="../Resources/Gfx/act3SkyTopForeground.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief09.dds" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<startForce xValue="0" yValue="-400" />
+	<gravity>400</gravity>
+	<airResistance>240</airResistance>
+	<backgroundMusic music="../Resources/Sfx/soundtrack2.mp3" />
+
+	<enemies>
+		<enemy name="lionJet" amount="1" xStart="287" yStart="7172" xEnd="387" yEnd="7272"/>
+		<enemy name="Kamikaze" amount="2" xStart="6956" yStart="4209" xEnd="7056" yEnd="4309"/>
+		<enemy name="lionJet" amount="1" xStart="3742" yStart="1271" xEnd="3842" yEnd="1371"/>
+		<enemy name="Enemy" amount="6" xStart="1763" yStart="2218" xEnd="6728" yEnd="4305"/>
+		<enemy name="tigerJet" amount="2" xStart="383" yStart="2974" xEnd="1835" yEnd="7256"/>
+		<enemy name="tigerJet" amount="2" xStart="6860" yStart="2782" xEnd="8000" yEnd="7496"/>
+	</enemies>
+
+	<enemySpawns>
+		<spawn enemyName="lionJet" timeBetweenSpawns="30" />
+		<spawn enemyName="Kamikaze" timeBetweenSpawns="15" />
+		<spawn enemyName="Enemy" timeBetweenSpawns="10" />
+	</enemySpawns>
+
+	<tileObjects>
+		<tileObject name="act3Cloud1" positionX="1205" positionY="2880"/>
+		<tileObject name="act3Cloud2" positionX="910" positionY="5070"/>
+		<tileObject name="act3Cloud3" positionX="2695" positionY="3675"/>
+		<tileObject name="act3Cloud1" positionX="2510" positionY="6380"/>
+		<tileObject name="act3Cloud2" positionX="4760" positionY="2300"/>
+		<tileObject name="act3Cloud3" positionX="5000" positionY="4170"/>
+		<tileObject name="act3Cloud3" positionX="6690" positionY="3170"/>
+		<tileObject name="act3Cloud3" positionX="7030" positionY="5500"/>
+		<tileObject name="act3Cloud1" positionX="2206" positionY="2830"/>
+		<tileObject name="act3Cloud2" positionX="6404" positionY="2890"/>
+		<tileObject name="act3Cloud3" positionX="6824" positionY="6392"/>
+		<tileObject name="act3Cloud1" positionX="851" positionY="6704"/>
+		<tileObject name="act1TurretBaseHull" positionX="1903" positionY="4577"/>
+		<tileObject name="act1TurretBaseHull" positionX="6424" positionY="4529"/>
+		<tileObject name="act1TurretBaseHull" positionX="1307" positionY="4115"/>
+		<tileObject name="act1TurretBaseHull" positionX="6956" positionY="4354"/>
+		<tileObject name="act1TurretBaseHull" positionX="4018" positionY="2927"/>
+		<tileObject name="act1TurretBaseHull" positionX="4137" positionY="6525"/>
+	</tileObjects>
+
+	<objectives>
+		<objective topic="turretsDestroyed" text="Destroy their turrets" amount="6"/>
+		<objective topic="objectiveTargetsDestroyed" text="Eliminate the satellite" amount="1"/>
+	</objectives>
+
+	<objectiveTargets>
+	    <objectiveTarget name="sateliteObjectiveTarget" x="4118" y="1031" rotation="0"/>
+    </objectiveTargets>
+
+
+	<turrets>
+		<turret name="defaultTurret" positionX="1893" positionY="4422" rotation="0"/>
+		<turret name="defaultTurret" positionX="6414" positionY="4374" rotation="0"/>
+		<turret name="defaultTurret" positionX="1297" positionY="3960" rotation="0"/>
+		<turret name="defaultTurret" positionX="6946" positionY="4199" rotation="0"/>
+		<turret name="ballTurret" positionX="4008" positionY="2752" rotation="0"/>
+		<turret name="ballTurret" positionX="4127" positionY="6350" rotation="0"/>
+	</turrets>
+
+	<parallaxes>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act3ParallaxBackground2.dds"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act3ParallaxBackground.dds"/>
+	</parallaxes>
+
+	<foregrounds>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act3ParallaxForeground.dds"/>
+	</foregrounds>
+</level>
