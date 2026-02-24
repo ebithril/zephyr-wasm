@@ -13,25 +13,25 @@
 	<regenrate rate="3" />
 
 
-	<texture file="../Resources/Gfx/playerTurnSpriteSheet.dds"/>
+	<texture file="../Resources/Gfx/playerTurnSpriteSheet.png"/>
 	<spriteSheet sizeX="2048" sizeY="256">
 		<animation id="turn" nrFrames="32" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" />
 	</spriteSheet>
 	<exhaust>
 		<exhaustActive>
-			<texture file="../Resources/Gfx/playerExhaustNeedleSpriteSheet.dds"/>
+			<texture file="../Resources/Gfx/playerExhaustNeedleSpriteSheet.png"/>
 			<spriteSheet sizeX="512" sizeY="128">
 				<animation id="Exhaust" nrFrames="8" spriteSizeX="64" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12"/>
 			</spriteSheet>
 		</exhaustActive>
 		<exhaustBoost>
-			<texture file="../Resources/Gfx/playerExhaustBoostNeedleSpriteSheet.dds"/>
+			<texture file="../Resources/Gfx/playerExhaustBoostNeedleSpriteSheet.png"/>
 			<spriteSheet sizeX="1024" sizeY="128">
 				<animation id="ExhaustBoost" nrFrames="3" spriteSizeX="256" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 			</spriteSheet>
 		</exhaustBoost>
 		<exhaustEnd>
-			<texture file="../Resources/Gfx/playerExhaustEndNeedleSpriteSheet.dds"/>
+			<texture file="../Resources/Gfx/playerExhaustEndNeedleSpriteSheet.png"/>
 			<spriteSheet sizeX="512" sizeY="128">
 				<animation id="ExhaustEnd" nrFrames="3" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 			</spriteSheet>

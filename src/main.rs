@@ -2,6 +2,7 @@ use hecs::World;
 use macroquad::prelude::*;
 
 mod components;
+mod level_loader;
 mod systems;
 
 use components::*;
@@ -30,9 +31,20 @@ async fn load_ship_texture(path: &str, color: Color) -> Texture2D {
 async fn main() {
     let mut world = World::new();
 
-    // Load ship modules (Hull, Engine, Weapon, Cockpit)
-    // Note: Using PNGs if they exist, otherwise fallback.
-    // In production, we'd convert the .dds files to .png.
+    // 1. Load Level Data
+    let level_settings =
+        match level_loader::load_level("Resources/Data/level0.xml", &mut world).await {
+            Ok(settings) => settings,
+            Err(e) => {
+                eprintln!("Failed to load level: {}", e);
+                level_loader::LevelSettings {
+                    gravity: 400.0,
+                    air_resistance: 240.0,
+                }
+            }
+        };
+
+    // 2. Load ship modules
     let hull_tex = load_ship_texture("Resources/Gfx/playerTurnSpriteSheetDefault.png", WHITE).await;
     let engine_tex = load_ship_texture(
         "Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineNeedle.png",
@@ -50,10 +62,10 @@ async fn main() {
     )
     .await;
 
-    // Spawn Player with Layered Visuals
-    world.spawn((
+    // 3. Spawn Player
+    let player = world.spawn((
         Transform {
-            position: vec2(400.0, 300.0),
+            position: vec2(4000.0, 300.0),
             rotation: 0.0,
         },
         Velocity(vec2(0.0, 0.0)),
@@ -72,7 +84,7 @@ async fn main() {
             flipped: false,
         },
         Engine {
-            acceleration: 500.0,
+            acceleration: 3000.0,
             max_speed: 400.0,
             turn_rate: 3.0,
         },
@@ -85,19 +97,38 @@ async fn main() {
         CircleCollider { radius: 32.0 },
     ));
 
+    // 4. Spawn Camera targeting the player
+    world.spawn((GameCamera {
+        target: Some(player),
+        offset: Vec2::ZERO,
+        screen_width: screen_width(),
+        screen_height: screen_height(),
+        smoothing: 5.0,
+    },));
+
     // Loop
     loop {
         let dt = get_frame_time();
         clear_background(BLACK);
 
-        // Control systems (set intent)
+        // Control systems
         player_input_system(&mut world);
         ai_controller_system(&mut world, dt);
 
-        // Movement systems (read intent)
-        ship_movement_system(&mut world, dt, 10.0);
-        ship_animation_system(&mut world); // Update tilt frame
-        physics_system(&mut world, dt);
+        // Movement systems
+        // Use values from level_loader
+        ship_movement_system(&mut world, dt, level_settings.air_resistance);
+        ship_animation_system(&mut world);
+
+        // Physics system (gravity)
+        for (transform, velocity) in world.query_mut::<(&mut Transform, &mut Velocity)>() {
+            velocity.0.y += level_settings.gravity * dt;
+            transform.position += velocity.0 * dt;
+            const WORLD_WIDTH: f32 = 8192.0;
+            transform.position.x = (transform.position.x % WORLD_WIDTH + WORLD_WIDTH) % WORLD_WIDTH;
+        }
+
+        camera_system(&mut world, dt);
 
         collision_system(&mut world);
         weaponry_system(&mut world, dt);

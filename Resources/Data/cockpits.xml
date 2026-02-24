@@ -8,7 +8,7 @@
 	<cockpit id="airResistance" maxHealth="120" regenerationRate="30" collisionDamageImpact="1.0" airRes="0.3" />
 	
 	<cockpit id="shield" maxHealth="50" regenerationRate="15" collisionDamageImpact="1.3" airRes="1.0" >
-		<shield maxHealth="90" regenerationRate="25" downtime="5" texture="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadShield.dds"/>
+		<shield maxHealth="90" regenerationRate="25" downtime="5" texture="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadShield.png"/>
 	</cockpit>
 	
 <!--Player cockpit end-->

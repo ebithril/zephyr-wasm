@@ -1,25 +1,25 @@
 <enemies>
 	<enemy name="Enemy" cockpit="enemyCockpit" weapon="enemyWeapon" engine="enemyEngine" behavior="attacker">
 		<size x="64" y="64"/>
-		<texture file="../Resources/Gfx/enemyAttackersTurnSpriteSheet.dds"/>
+		<texture file="../Resources/Gfx/enemyAttackersTurnSpriteSheet.png"/>
 		<spriteSheet sizeX="2048" sizeY="256">
 			<animation id="turn" nrFrames="32" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" />
 		</spriteSheet>
 		<exhaust>
 			<exhaustActive>
-				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.dds" />
+				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.png" />
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="Exhaust" nrFrames="8" spriteSizeX="64" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="true"/>
 				</spriteSheet>
 			</exhaustActive>
 			<exhaustBoost>
-				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.png"/>
 				<spriteSheet sizeX="1024" sizeY="128">
 					<animation id="ExhaustBoost" nrFrames="7" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>
 			</exhaustBoost>
 			<exhaustEnd>
-				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.dds" />
+				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.png" />
 				
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="ExhaustEnd" nrFrames="4" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
@@ -47,26 +47,26 @@
 
 	<enemy name="Kamikaze" cockpit="enemyCockpit2" weapon="enemyWeapon" engine="kamikaze" behavior="kamikaze" >
 		<size x="64" y="64"/>
-		<texture file="../Resources/Gfx/enemyKamikazeTurnSpriteSheet.dds"/>
+		<texture file="../Resources/Gfx/enemyKamikazeTurnSpriteSheet.png"/>
 		<spriteSheet sizeX="2048" sizeY="256">
 			
 			<animation id="turn" nrFrames="32" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" />
 		</spriteSheet>
 		<exhaust>
 			<exhaustActive>
-				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.png"/>
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="Exhaust" nrFrames="8" spriteSizeX="64" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="true"/>
 				</spriteSheet>
 			</exhaustActive>
 			<exhaustBoost>
-				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.dds" />
+				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.png" />
 				<spriteSheet sizeX="1024" sizeY="128">
 					<animation id="ExhaustBoost" nrFrames="7" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>
 			</exhaustBoost>
 			<exhaustEnd>
-				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.png"/>
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="ExhaustEnd" nrFrames="4" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>
@@ -91,26 +91,26 @@
 	</enemy>
 	<enemy name="lionJet" cockpit="enemyCockpit3" weapon="spreadShotEnemyLion" engine="lionEnmgine" behavior="attacker">
 		<size x="128" y="128"/>
-		<texture file="../Resources/Gfx/enemyTigerTurnSpriteSheet.dds"/>
+		<texture file="../Resources/Gfx/enemyTigerTurnSpriteSheet.png"/>
 		<spriteSheet sizeX="2048" sizeY="256">
 			<animation id="turn" nrFrames="32" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" />
 		</spriteSheet>
 
 		<exhaust>
 			<exhaustActive>
-				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.png"/>
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="Exhaust" nrFrames="8" spriteSizeX="64" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="true"/>
 				</spriteSheet>
 			</exhaustActive>
 			<exhaustBoost>
-				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.png"/>
 				<spriteSheet sizeX="1024" sizeY="128">
 					<animation id="ExhaustBoost" nrFrames="7" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>
 			</exhaustBoost>
 			<exhaustEnd>
-				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.png"/>
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="ExhaustEnd" nrFrames="4" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>
@@ -136,26 +136,26 @@
 
 	<enemy name="tigerJet" cockpit="enemyCockpit4" weapon="enemyHoming" engine="tigerEnmgine" behavior="attacker">
 		<size x="256" y="256"/>
-		<texture file="../Resources/Gfx/enemyPumaTurnSpriteSheet.dds"/>
+		<texture file="../Resources/Gfx/enemyPumaTurnSpriteSheet.png"/>
 		<spriteSheet sizeX="4096" sizeY="512">
 			<animation id="turn" nrFrames="32" spriteSizeX="256" spriteSizeY="256" animationLoadingPointX="0" animationLoadingPointY="0" />
 		</spriteSheet>
 
 		<exhaust>
 			<exhaustActive>
-				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustSpriteSheet.png"/>
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="Exhaust" nrFrames="8" spriteSizeX="64" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="true"/>
 				</spriteSheet>
 			</exhaustActive>
 			<exhaustBoost>
-				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustBoostSpriteSheet.png"/>
 				<spriteSheet sizeX="1024" sizeY="128">
 					<animation id="ExhaustBoost" nrFrames="7" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>
 			</exhaustBoost>
 			<exhaustEnd>
-				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.dds"/>
+				<texture file="../Resources/Gfx/enemyExhaustEndSpriteSheet.png"/>
 				<spriteSheet sizeX="512" sizeY="128">
 					<animation id="ExhaustEnd" nrFrames="4" spriteSizeX="128" spriteSizeY="128" animationLoadingPointX="0" animationLoadingPointY="0" fps="12" loop="false"/>
 				</spriteSheet>

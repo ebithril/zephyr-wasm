@@ -1,6 +1,6 @@
 <objectiveTarget>
 	<size width="155" height="155" colliderWidth="128" colliderHeight="128"/>
-	<animation spriteSheet="../resources/gfx/ObjectiveTargets/core.dds" width="640" height="890" fileWidth="1024" fileHeight="1024" spriteWidth="128" spriteHeight="128" numberOfFrames="35" fps="12"/>
-	<sprite destroyedSprite="../resources/gfx/ObjectiveTargets/coreDestroyed.dds"/>
+	<animation spriteSheet="../resources/gfx/ObjectiveTargets/core.png" width="640" height="890" fileWidth="1024" fileHeight="1024" spriteWidth="128" spriteHeight="128" numberOfFrames="35" fps="12"/>
+	<sprite destroyedSprite="../resources/gfx/ObjectiveTargets/coreDestroyed.png"/>
 	<stats collisionDps="60" hp="800"/>
 </objectiveTarget>

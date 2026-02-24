@@ -1,6 +1,6 @@
-use macroquad::prelude::*;
-use hecs::World;
 use crate::components::*;
+use hecs::World;
+use macroquad::prelude::*;
 
 /// The core Ship movement logic (Rotation, Thrust, Air Resistance).
 pub fn ship_movement_system(world: &mut World, dt: f32, global_air_resistance: f32) {
@@ -36,7 +36,7 @@ pub fn ship_movement_system(world: &mut World, dt: f32, global_air_resistance: f
 
 /// Update entity positions and handle gravity + level wrapping.
 pub fn physics_system(world: &mut World, dt: f32) {
-    let gravity = vec2(0.0, 98.1); 
+    let gravity = vec2(0.0, 98.1);
 
     for (transform, velocity) in world.query_mut::<(&mut Transform, &mut Velocity)>() {
         velocity.0 += gravity * dt;
@@ -50,11 +50,11 @@ pub fn physics_system(world: &mut World, dt: f32) {
 /// Update Ship tilt animation frame based on its rotation.
 pub fn ship_animation_system(world: &mut World) {
     for (transform, anim) in world.query_mut::<(&Transform, &mut ShipAnimation)>() {
-        // Forward vector: 0 rad is Right (1, 0). 
+        // Forward vector: 0 rad is Right (1, 0).
         // We want the vector pointing out the "nose" of the ship.
         // If 0 rad in texture is Up, Nose is (sin, -cos).
         // Let's use the rotation to find the "forward" vector components.
-        let nose_dir = vec2(transform.rotation.sin(), -transform.rotation.cos());
+        let nose_dir = vec2(-transform.rotation.sin(), transform.rotation.cos());
 
         // Flip check: If pointing left, flip the sprite.
         anim.flipped = nose_dir.x < 0.0;
@@ -62,13 +62,13 @@ pub fn ship_animation_system(world: &mut World) {
         // Tilt calculation: Use the vertical component (y) to choose a frame.
         // nose_dir.y goes from -1.0 (straight up) to 1.0 (straight down).
         // We want to map this to 0..total_frames-1.
-        
+
         // If flipped, we still want the same tilt logic relative to the vertical axis.
         let tilt_val = nose_dir.y; // -1 (up) to 1 (down)
-        
+
         // Normalize -1..1 to 0..1
         let t = (tilt_val + 1.0) / 2.0;
-        
+
         let frame_idx = (t * (anim.total_frames as f32 - 1.0)).round() as u32;
         anim.current_frame = frame_idx.clamp(0, anim.total_frames - 1);
     }

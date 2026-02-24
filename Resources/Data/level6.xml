@@ -1,13 +1,13 @@
 <level>
-	<background picture="../Resources/Gfx/act2SkyBackground.dds" />
-	<bottomForeground picture="../Resources/Gfx/act2SkyBottomForeground.dds" />
-	<parallaxFix picture="../Resources/Gfx/act2SkyParallaxFix.dds" />
+	<background picture="../Resources/Gfx/act2SkyBackground.png" />
+	<bottomForeground picture="../Resources/Gfx/act2SkyBottomForeground.png" />
+	<parallaxFix picture="../Resources/Gfx/act2SkyParallaxFix.png" />
 	
-	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief06.dds" />
-	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
-	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
-	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
-	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/brief06.png" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.png" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.png" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.png" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.png" />
 	<startForce xValue="0" yValue="-400" />
 	<gravity>400</gravity>
 	<airResistance>240</airResistance>
@@ -80,11 +80,11 @@
 	</turrets>
 
 	<parallaxes>
-		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act2ParallaxBackground2.dds"/>
-		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act2ParallaxBackground.dds"/>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act2ParallaxBackground2.png"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act2ParallaxBackground.png"/>
 	</parallaxes>
 
 	<foregrounds>
-		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act2ParallaxForeground.dds"/>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act2ParallaxForeground.png"/>
 	</foregrounds>
 </level>

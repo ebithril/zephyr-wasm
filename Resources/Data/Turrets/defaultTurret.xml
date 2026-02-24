@@ -1,6 +1,6 @@
 <turret>
-	<base texture="../Resources/Gfx/Turrets/turretBase.dds" textureDestroyed="../Resources/Gfx/Turrets/turretBaseDestroyed.dds" width="220" height="92" detectionRadius="2000" hp="550" collisionDps="10"/>
-	<barrel spriteSheet="../Resources/Gfx/Turrets/turretTowerSpriteSheet.dds" width="64" height ="203" rotMin="-70" rotMax="70" rotSpeed="70" inaccuracy="30"/>
+	<base texture="../Resources/Gfx/Turrets/turretBase.png" textureDestroyed="../Resources/Gfx/Turrets/turretBaseDestroyed.png" width="220" height="92" detectionRadius="2000" hp="550" collisionDps="10"/>
+	<barrel spriteSheet="../Resources/Gfx/Turrets/turretTowerSpriteSheet.png" width="64" height ="203" rotMin="-70" rotMax="70" rotSpeed="70" inaccuracy="30"/>
 	<fireAnimation sheetWidth="512" sheetHeight="512" numberOfFrames="16" fps="24"/>
 	<weapon name = "turretGun"/>
 </turret>

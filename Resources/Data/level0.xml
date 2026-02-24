@@ -1,13 +1,13 @@
 <level>
-	<background picture="../Resources/Gfx/act1SkyBackground.dds" />
-	<bottomForeground picture="../Resources/Gfx/act1SkyBottomForeground.dds" />
-	<parallaxFix picture="../Resources/Gfx/act0SkyParallaxFix.dds" />
-	<topForeground picture="../Resources/Gfx/act1SkyTopForeground.dds" />
-	<briefingScreen picture="../Resources/Gfx/Icons/brief/briefTitle.dds" />
-	<radar picture="../Resources/Gfx/Icons/radar/radarBack.dds" />
-	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.dds" />
-	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.dds" />
-	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.dds" />
+	<background picture="../Resources/Gfx/act1SkyBackground.png" />
+	<bottomForeground picture="../Resources/Gfx/act1SkyBottomForeground.png" />
+	<parallaxFix picture="../Resources/Gfx/act0SkyParallaxFix.png" />
+	<topForeground picture="../Resources/Gfx/act1SkyTopForeground.png" />
+	<briefingScreen picture="../Resources/Gfx/Icons/brief/briefTitle.png" />
+	<radar picture="../Resources/Gfx/Icons/radar/radarBack.png" />
+	<radarPlayer picture="../Resources/Gfx/Icons/radar/radarPlayer.png" />
+	<radarTurret picture="../Resources/Gfx/Icons/radar/radarTurret.png" />
+	<radarObjective picture="../Resources/Gfx/Icons/radar/radarObjective.png" />
 	<startForce xValue="0" yValue="-400" />
 	<gravity>400</gravity>
 	<airResistance>240</airResistance>
@@ -38,11 +38,11 @@
 	</turrets>
 
 	<parallaxes>
-		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act1ParallaxBackground.dds"/>
-		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act1ParallaxBackground.dds"/>
+		<parallax relativeSpeed="0.3" texture="../Resources/Gfx/act1ParallaxBackground.png"/>
+		<parallax relativeSpeed="0.6" texture="../Resources/Gfx/act1ParallaxBackground.png"/>
 	</parallaxes>
 
 	<foregrounds>
-		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act1ParallaxForeground.dds"/>
+		<parallax relativeSpeed="-0.6" texture="../Resources/Gfx/act1ParallaxForeground.png"/>
 	</foregrounds>
 </level>

@@ -9,23 +9,23 @@ spreadshot = spreadshot tag
 <!--Player weapons start-->
 
 	<machinegun id="superMachineGun" firerate="0.2" spreadradian="0.2">
-		<bullet lifetime="1.5" speed="900" damage="110" texture="../Resources/Gfx/Bullets/playerBullet2.dds" sizex="20" sizey="46" collidersize="12"/>
+		<bullet lifetime="1.5" speed="900" damage="110" texture="../Resources/Gfx/Bullets/playerBullet2.png" sizex="20" sizey="46" collidersize="12"/>
 	</machinegun>
 	
 	<spreadshot id="spreadShotMonster2000" firerate="0.65" spreadradian="0.45" bulletamount="5">
-		<bullet lifetime="1" speed="1600" damage="50" texture="../Resources/Gfx/Bullets/playerBullet1.dds" sizex="16" sizey="16" collidersize="10"/>
+		<bullet lifetime="1" speed="1600" damage="50" texture="../Resources/Gfx/Bullets/playerBullet1.png" sizex="16" sizey="16" collidersize="10"/>
 	</spreadshot>
 	
 	<homingmissiles id="homingClusters" firerate="1" spreadradian="1" bulletamount="4">
-		<bullet lifetime="2" speed="400" damage="65" texture="../Resources/Gfx/Bullets/playerBullet3.dds" sizex="6" sizey="20" collidersize="8"/>
+		<bullet lifetime="2" speed="400" damage="65" texture="../Resources/Gfx/Bullets/playerBullet3.png" sizex="6" sizey="20" collidersize="8"/>
 	</homingmissiles>
 	
 	<spreadshot id="theSun" firerate="0.0001" spreadradian="6.28" bulletamount="75">
-		<bullet lifetime="32" speed="5000" damage="10" texture="../Resources/Gfx/Bullets/blackDiamond.dds" sizex="64" sizey="64" collidersize="32"/>
+		<bullet lifetime="32" speed="5000" damage="10" texture="../Resources/Gfx/Bullets/blackDiamond.png" sizex="64" sizey="64" collidersize="32"/>
 	</spreadshot>
 	
 	<machinegun id="miniGun" firerate="0.1" spreadradian="0.6">
-		<bullet lifetime="1" speed="1000" damage="50" texture="../Resources/Gfx/Bullets/playerBullet2.dds" sizex="15" sizey="31" collidersize="8"/>
+		<bullet lifetime="1" speed="1000" damage="50" texture="../Resources/Gfx/Bullets/playerBullet2.png" sizex="15" sizey="31" collidersize="8"/>
 	</machinegun>
 
 <!--Player weapons end-->
@@ -34,27 +34,27 @@ spreadshot = spreadshot tag
 <!--Enemy weapons start-->
 
 	<machinegun id="enemyWeapon" firerate="1.5" spreadradian="0.35">
-		<bullet lifetime="1.5" speed="1200" damage="12" texture="../Resources/Gfx/Bullets/blackDiamond.dds" sizex="20" sizey="20" collidersize="10"/>
+		<bullet lifetime="1.5" speed="1200" damage="12" texture="../Resources/Gfx/Bullets/blackDiamond.png" sizex="20" sizey="20" collidersize="10"/>
 	</machinegun>
 	
 	<machinegun id="lionGun" firerate="0.3" spreadradian="0.35">
-		<bullet lifetime="1" speed="1200" damage="8" texture="../Resources/Gfx/Bullets/blackDiamond.dds" sizex="128" sizey="128" collidersize="10"/>
+		<bullet lifetime="1" speed="1200" damage="8" texture="../Resources/Gfx/Bullets/blackDiamond.png" sizex="128" sizey="128" collidersize="10"/>
 	</machinegun>
 			
 	<machinegun id="kamikaze" firerate="999" spreadradian="0">
-		<bullet lifetime="3" speed="2000" damage="10" texture="../Resources/Gfx/Bullets/blackDiamond.dds" sizex="64" sizey="64" collidersize="32"/>
+		<bullet lifetime="3" speed="2000" damage="10" texture="../Resources/Gfx/Bullets/blackDiamond.png" sizex="64" sizey="64" collidersize="32"/>
 	</machinegun>
 	
 	<spreadshot id="pumaGun" firerate="3" spreadradian="0.35" bulletamount="2">
-		<bullet lifetime="2" speed="600" damage="25" texture="../Resources/Gfx/Bullets/blackDiamond.dds" sizex="44" sizey="44" collidersize="18"/>
+		<bullet lifetime="2" speed="600" damage="25" texture="../Resources/Gfx/Bullets/blackDiamond.png" sizex="44" sizey="44" collidersize="18"/>
 	</spreadshot>
 	
 	<homingmissiles id="enemyHoming" firerate="2" spreadradian="1" bulletamount="2">
-		<bullet lifetime="4" speed="350" damage="15" texture="../Resources/Gfx/missileSprite.dds" sizex="30" sizey="30" collidersize="16"/>
+		<bullet lifetime="4" speed="350" damage="15" texture="../Resources/Gfx/missileSprite.png" sizex="30" sizey="30" collidersize="16"/>
 	</homingmissiles>
 
 	<spreadshot id="spreadShotEnemyLion" firerate="1.7" spreadradian="0.65" bulletamount="3">
-		<bullet lifetime="1" speed="600" damage="20" texture="../Resources/Gfx/Bullets/lionBullet.dds" sizex="32" sizey="32" collidersize="14"/>
+		<bullet lifetime="1" speed="600" damage="20" texture="../Resources/Gfx/Bullets/lionBullet.png" sizex="32" sizey="32" collidersize="14"/>
 	</spreadshot>
 	
 <!--Enemy weapons end-->
@@ -63,11 +63,11 @@ spreadshot = spreadshot tag
 <!--Turret weapons start-->
 
 	<machinegun id="turretGun" firerate="1.2" spreadradian="0.35">
-		<bullet lifetime="2" speed="1200" damage="25" texture="../Resources/Gfx/Bullets/turretShot2.dds" sizex="14" sizey="50" collidersize="7"/>
+		<bullet lifetime="2" speed="1200" damage="25" texture="../Resources/Gfx/Bullets/turretShot2.png" sizex="14" sizey="50" collidersize="7"/>
 	</machinegun>
 
 	<machinegun id="ballTurretGun" firerate="2.0" spreadradian="0.35">
-		<bullet lifetime="5" speed="1500" damage="35" texture="../Resources/Gfx/Bullets/lionBullet.dds" sizex="50" sizey="50" collidersize="20"/>
+		<bullet lifetime="5" speed="1500" damage="35" texture="../Resources/Gfx/Bullets/lionBullet.png" sizex="50" sizey="50" collidersize="20"/>
 	</machinegun>
 	
 <!--Turret weapons end-->

@@ -10,7 +10,7 @@
 			<direction x="0" y="-1"/>
 			<spread radian="-0.1"/>
 			<airResistance resist="1"/>
-			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.png" sizex="64" sizey="64"/>
 		</emitter>
 		<particles>
 			<startsize x="30" y="30"/>
@@ -73,7 +73,7 @@
 			<direction x="0" y="1"/>
 			<spread radian="0.3"/>
 			<airResistance resist="0"/>
-			<sprite dir="../Resources/Gfx/ParticleEffects/blackRectangle.dds" sizex="64" sizey="64"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackRectangle.png" sizex="64" sizey="64"/>
 		</emitter>
 		<particles>
 			<startsize x="13" y="13"/>
@@ -95,7 +95,7 @@
 			<direction x="0" y="1"/>
 			<spread radian="6.22"/>
 			<airResistance resist="2"/>
-			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.png" sizex="64" sizey="64"/>
 		</emitter>
 		<particles>
 			<startsize x="13" y="13"/>
@@ -117,7 +117,7 @@
 			<direction x="0" y="-1"/>
 			<spread radian="-0.1"/>
 			<airResistance resist="1"/>
-			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.png" sizex="64" sizey="64"/>
 		</emitter>
 		<particles>
 			<startsize x="28" y="28"/>
@@ -139,7 +139,7 @@
 			<direction x="0" y="-1"/>
 			<spread radian="-0.1"/>
 			<airResistance resist="1"/>
-			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.dds" sizex="64" sizey="64"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackCircle.png" sizex="64" sizey="64"/>
 		</emitter>
 		<particles>
 			<startsize x="14" y="14"/>
@@ -161,7 +161,7 @@
 			<direction x="0" y="-1"/>
 			<spread radian="6.28"/>
 			<airResistance resist="1.5"/>
-			<sprite dir="../Resources/Gfx/ParticleEffects/blackDiamond.dds" sizex="64" sizey="64"/>
+			<sprite dir="../Resources/Gfx/ParticleEffects/blackDiamond.png" sizex="64" sizey="64"/>
 		</emitter>
 		<particles>
 			<startsize x="12" y="12"/>

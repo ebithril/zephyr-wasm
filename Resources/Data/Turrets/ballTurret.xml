@@ -1,8 +1,8 @@
 <!-- One turret per file! -->
 <!-- All rotation angle (rot) and inaccuracy are defined in euclidean angles. (360 angles per rotation; positive or negative.) -->
 <turret>
-	<base texture="../Resources/Gfx/Turrets/ballTurretBase.dds" textureDestroyed="../Resources/Gfx/Turrets/ballTurretBaseDestroyed.dds" width="240" height="128" detectionRadius="2500" hp="1000" collisionDps="10"/>
-	<barrel spriteSheet="../Resources/Gfx/Turrets/ballTurretTowerSpriteSheet.dds" width="256" height ="256" rotMin="-40" rotMax="40" rotSpeed="70" inaccuracy="30"/>
+	<base texture="../Resources/Gfx/Turrets/ballTurretBase.png" textureDestroyed="../Resources/Gfx/Turrets/ballTurretBaseDestroyed.png" width="240" height="128" detectionRadius="2500" hp="1000" collisionDps="10"/>
+	<barrel spriteSheet="../Resources/Gfx/Turrets/ballTurretTowerSpriteSheet.png" width="256" height ="256" rotMin="-40" rotMax="40" rotSpeed="70" inaccuracy="30"/>
 	<fireAnimation sheetWidth="2048" sheetHeight="512" numberOfFrames="16" fps="24"/>
 	<weapon name = "ballTurretGun"/>
 </turret>

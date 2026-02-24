@@ -92,3 +92,19 @@ pub enum AiState {
 pub struct PlayerControlled;
 pub struct TeamFriendly;
 pub struct TeamHostile;
+
+/// Camera component to track a target or position
+pub struct GameCamera {
+    pub target: Option<hecs::Entity>,
+    pub offset: Vec2,
+    pub screen_width: f32,
+    pub screen_height: f32,
+    pub smoothing: f32,
+}
+
+pub struct Parallax {
+    pub relative_speed: f32,
+    pub width: f32,
+    pub height: f32,
+    pub layer: i32,
+}

@@ -2,18 +2,18 @@
 
 <shipTextures>
 	<playerTexture file="" id="test"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineNeedle.dds" id="jetEngine"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineHawk.dds" id="gliderEngine"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineBauble.dds" id="gravEngine"/>		
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineNeedle.png" id="jetEngine"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineHawk.png" id="gliderEngine"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineBauble.png" id="gravEngine"/>		
 
 	<playerTexture file="" id="superMachineGun"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponSpreadshot.dds" id="spreadShotMonster2000"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponHoming.dds" id="homingClusters"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponLaser.dds" id="miniGun"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponSpreadshot.png" id="spreadShotMonster2000"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponHoming.png" id="homingClusters"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponLaser.png" id="miniGun"/>
 
 
 	<playerTexture file="" id="standard"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadHammer.dds" id="ramming"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadShield2.dds" id="shield"/>
-	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadCloud.dds" id="airResistance"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadHammer.png" id="ramming"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadShield2.png" id="shield"/>
+	<playerTexture file="../Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadCloud.png" id="airResistance"/>
 </shipTextures>
