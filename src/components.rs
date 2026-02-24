@@ -1,5 +1,12 @@
 use macroquad::prelude::*;
 
+#[derive(PartialOrd, Ord, PartialEq, Eq)]
+pub enum RenderLayer {
+    Background,
+    Default,
+    Foreground,
+}
+
 pub struct Transform {
     pub position: Vec2,
     pub rotation: f32, // In radians
@@ -10,14 +17,12 @@ pub struct Velocity(pub Vec2);
 pub struct Sprite {
     pub texture: Texture2D,
     pub source_rect: Option<Rect>,
+    pub dest_size: Option<Vec2>,
+    pub layer: RenderLayer,
 }
 
 /// Component for layered ship visuals (Hull + Modules)
 pub struct ShipVisuals {
-    pub hull: Texture2D,
-    pub engine: Option<Texture2D>,
-    pub weapon: Option<Texture2D>,
-    pub cockpit: Option<Texture2D>,
     pub sprite_width: f32,
     pub sprite_height: f32,
     pub sprite_cols: u32,

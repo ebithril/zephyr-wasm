@@ -49,7 +49,9 @@ pub fn physics_system(world: &mut World, dt: f32) {
 
 /// Update Ship tilt animation frame based on its rotation.
 pub fn ship_animation_system(world: &mut World) {
-    for (transform, anim) in world.query_mut::<(&Transform, &mut ShipAnimation)>() {
+    for (transform, anim, visuals, sprite) in
+        world.query_mut::<(&Transform, &mut ShipAnimation, &ShipVisuals, &mut Sprite)>()
+    {
         // Forward vector: 0 rad is Right (1, 0).
         // We want the vector pointing out the "nose" of the ship.
         // If 0 rad in texture is Up, Nose is (sin, -cos).
@@ -71,5 +73,15 @@ pub fn ship_animation_system(world: &mut World) {
 
         let frame_idx = (t * (anim.total_frames as f32 - 1.0)).round() as u32;
         anim.current_frame = frame_idx.clamp(0, anim.total_frames - 1);
+
+        let frame_x = (anim.current_frame % visuals.sprite_cols) as f32 * visuals.sprite_width;
+        let frame_y = (anim.current_frame / visuals.sprite_cols) as f32 * visuals.sprite_height;
+
+        sprite.source_rect = Some(Rect::new(
+            frame_x,
+            frame_y,
+            visuals.sprite_width,
+            visuals.sprite_height,
+        ));
     }
 }

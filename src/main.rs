@@ -70,13 +70,15 @@ async fn main() {
         },
         Velocity(vec2(0.0, 0.0)),
         ShipVisuals {
-            hull: hull_tex,
-            engine: Some(engine_tex),
-            weapon: Some(weapon_tex),
-            cockpit: Some(cockpit_tex),
             sprite_width: 128.0,
             sprite_height: 128.0,
             sprite_cols: 16,
+        },
+        Sprite {
+            texture: hull_tex,
+            source_rect: None,
+            dest_size: None,
+            layer: RenderLayer::Default,
         },
         ShipAnimation {
             total_frames: 32,

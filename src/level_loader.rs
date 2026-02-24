@@ -57,6 +57,8 @@ pub async fn load_level(
         Sprite {
             texture: bg_tex,
             source_rect: None,
+            dest_size: Some(Vec2::new(8192., 8192.)),
+            layer: RenderLayer::Background,
         },
         Parallax {
             relative_speed: 1.0, // Fixed on screen
