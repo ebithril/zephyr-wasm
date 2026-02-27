@@ -1,8 +1,12 @@
-use std::collections::HashMap;
 use macroquad::prelude::*;
 use std::cell::RefCell;
+use std::collections::HashMap;
+use std::future::Future;
+use std::pin::Pin;
 
 pub type AssetId = i32;
+
+type AssetFuture = Pin<Box<dyn Future<Output = Result<Texture2D, macroquad::Error>>>>;
 
 struct Asset {
     path: String,
@@ -13,7 +17,7 @@ struct Asset {
 struct AssetManager {
     assets: HashMap<AssetId, Asset>,
     path_to_id: HashMap<String, AssetId>,
-    load_queue: Vec<AssetId>,
+    loading_assets: HashMap<AssetId, AssetFuture>,
     next_id: AssetId,
     placeholder: Texture2D,
 }
@@ -29,7 +33,7 @@ impl AssetManager {
         Self {
             assets: HashMap::new(),
             path_to_id: HashMap::new(),
-            load_queue: Vec::new(),
+            loading_assets: HashMap::new(),
             next_id: 1,
             placeholder,
         }
@@ -45,17 +49,25 @@ pub fn get_texture_ref(path: &str) -> AssetId {
                 return id;
             }
         }
-        
+
         let id = am.next_id;
         am.next_id += 1;
-        
-        am.assets.insert(id, Asset {
-            path: path.to_string(),
-            texture: None,
-            ref_count: 1,
-        });
+
+        am.assets.insert(
+            id,
+            Asset {
+                path: path.to_string(),
+                texture: None,
+                ref_count: 1,
+            },
+        );
         am.path_to_id.insert(path.to_string(), id);
-        am.load_queue.push(id);
+
+        // Start loading immediately
+        let path_clone = path.to_string();
+        let future = Box::pin(async move { load_texture(&path_clone).await });
+        am.loading_assets.insert(id, future);
+
         id
     })
 }
@@ -70,26 +82,24 @@ pub fn free_asset(id: AssetId) {
                 remove = true;
             }
         }
-        
+
         if remove {
             if let Some(asset) = am.assets.remove(&id) {
                 am.path_to_id.remove(&asset.path);
+                am.loading_assets.remove(&id);
             }
         }
     })
 }
 
 pub async fn flush_queue() {
-    let to_load: Vec<(AssetId, String)> = INSTANCE.with(|am| {
+    let futures: Vec<(AssetId, AssetFuture)> = INSTANCE.with(|am| {
         let mut am = am.borrow_mut();
-        let queue = am.load_queue.drain(..).collect::<Vec<_>>();
-        queue.into_iter().filter_map(|id| {
-            am.assets.get(&id).map(|a| (id, a.path.clone()))
-        }).collect()
+        std::mem::take(&mut am.loading_assets).into_iter().collect()
     });
-    
-    for (id, path) in to_load {
-        match load_texture(&path).await {
+
+    for (id, future) in futures {
+        match future.await {
             Ok(tex) => {
                 tex.set_filter(FilterMode::Nearest);
                 INSTANCE.with(|am| {
@@ -99,6 +109,13 @@ pub async fn flush_queue() {
                 });
             }
             Err(e) => {
+                let path = INSTANCE.with(|am| {
+                    am.borrow()
+                        .assets
+                        .get(&id)
+                        .map(|a| a.path.clone())
+                        .unwrap_or_else(|| "unknown".to_string())
+                });
                 eprintln!("Failed to load texture: {}: {}", path, e);
             }
         }
@@ -108,7 +125,8 @@ pub async fn flush_queue() {
 pub fn get_texture(id: AssetId) -> Texture2D {
     INSTANCE.with(|am| {
         let am = am.borrow();
-        am.assets.get(&id)
+        am.assets
+            .get(&id)
             .and_then(|a| a.texture.clone())
             .unwrap_or_else(|| am.placeholder.clone())
     })
