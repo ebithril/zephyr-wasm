@@ -65,7 +65,7 @@ async fn main() {
     // 3. Spawn Player
     let player = world.spawn((
         Transform {
-            position: vec2(4000.0, 300.0),
+            position: vec2(4000.0, 7700.0),
             rotation: 0.0,
         },
         Velocity(vec2(0.0, 0.0)),
@@ -102,7 +102,7 @@ async fn main() {
     // 4. Spawn Camera targeting the player
     world.spawn((GameCamera {
         target: Some(player),
-        offset: Vec2::ZERO,
+        offset: vec2(4000.0, 7700.0),
         screen_width: screen_width(),
         screen_height: screen_height(),
         smoothing: 5.0,
