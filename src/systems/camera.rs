@@ -1,30 +1,44 @@
-use macroquad::prelude::*;
-use hecs::World;
 use crate::components::*;
-use std::collections::HashMap;
+use hecs::World;
+use macroquad::prelude::*;
 
 pub fn camera_system(world: &mut World, dt: f32) {
-    // 1. Collect all potential target positions first.
-    // We explicitly ask for Entity ID in this query.
-    let mut target_positions = HashMap::new();
-    for (id, transform) in world.query::<(hecs::Entity, &Transform)>().iter() {
-        target_positions.insert(id, transform.position);
+    let level_size = 8192.;
+    let mut target_position = Vec2::default();
+    let mut target_velocity = Vec2::default();
+
+    for (transform, velocity, _) in world
+        .query::<(&Transform, &Velocity, &PlayerControlled)>()
+        .iter()
+    {
+        target_position = transform.position.clone();
+        target_velocity = velocity.0.clone();
+        break;
     }
 
-    // 2. Update cameras. 
-    // We do NOT ask for Entity ID here, so we just get the GameCamera component.
     for camera in world.query_mut::<&mut GameCamera>() {
-        if let Some(target_id) = camera.target {
-            if let Some(target_pos) = target_positions.get(&target_id) {
-                // Desired camera top-left to center the target
-                let desired_pos = vec2(
-                    target_pos.x - camera.screen_width / 2.0,
-                    target_pos.y - camera.screen_height / 2.0,
-                );
+        let mut relative_position = camera.offset.clone();
 
-                // Apply smoothing
-                camera.offset += (desired_pos - camera.offset) * camera.smoothing * dt;
-            }
+        let half_level_size = level_size / 2.;
+        let x_diff = target_position.x - relative_position.x;
+        if x_diff > half_level_size {
+            relative_position.x += level_size;
+        } else if x_diff < -half_level_size {
+            relative_position.x -= level_size;
         }
+
+        camera.offset = relative_position.lerp(
+            (target_position + target_velocity).lerp(target_position, 0.6),
+            5. * dt,
+        );
+
+        let half_screen_height = screen_height() / 2.;
+        if camera.offset.y - half_screen_height < 0. {
+            camera.offset.y = half_screen_height;
+        } else if camera.offset.y + half_screen_height > level_size {
+            camera.offset.y = level_size - half_screen_height;
+        }
+
+        break;
     }
 }
