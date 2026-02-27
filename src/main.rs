@@ -1,31 +1,14 @@
 use hecs::World;
 use macroquad::prelude::*;
 
+mod asset_manager;
 mod components;
 mod level_loader;
 mod systems;
 
+use asset_manager::{flush_queue, get_texture_ref};
 use components::*;
 use systems::*;
-
-async fn load_ship_texture(path: &str, color: Color) -> Texture2D {
-    match load_texture(path).await {
-        Ok(tex) => {
-            tex.set_filter(FilterMode::Nearest);
-            tex
-        }
-        Err(_) => {
-            let mut bytes = vec![0u8; 32 * 32 * 4];
-            for i in 0..32 * 32 {
-                bytes[i * 4] = (color.r * 255.0) as u8;
-                bytes[i * 4 + 1] = (color.g * 255.0) as u8;
-                bytes[i * 4 + 2] = (color.b * 255.0) as u8;
-                bytes[i * 4 + 3] = (color.a * 255.0) as u8;
-            }
-            Texture2D::from_rgba8(32, 32, &bytes)
-        }
-    }
-}
 
 #[macroquad::main("Zephyr")]
 async fn main() {
@@ -44,23 +27,18 @@ async fn main() {
             }
         };
 
-    // 2. Load ship modules
-    let hull_tex = load_ship_texture("Resources/Gfx/playerTurnSpriteSheetDefault.png", WHITE).await;
-    let engine_tex = load_ship_texture(
-        "Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineNeedle.png",
-        BLUE,
-    )
-    .await;
-    let weapon_tex = load_ship_texture(
+    // 2. Queue ship modules
+    let hull_id = get_texture_ref("Resources/Gfx/playerTurnSpriteSheetDefault.png");
+    let _engine_id =
+        get_texture_ref("Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetEngineNeedle.png");
+    let _weapon_id = get_texture_ref(
         "Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetWeaponSpreadshot.png",
-        RED,
-    )
-    .await;
-    let cockpit_tex = load_ship_texture(
-        "Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadHammer.png",
-        YELLOW,
-    )
-    .await;
+    );
+    let _cockpit_id =
+        get_texture_ref("Resources/Gfx/PlayerShipModules/playerTurnSpriteSheetHeadHammer.png");
+
+    // Load queued assets
+    flush_queue().await;
 
     // 3. Spawn Player
     let player = world.spawn((
@@ -75,7 +53,7 @@ async fn main() {
             sprite_cols: 16,
         },
         Sprite {
-            texture: hull_tex,
+            texture_id: hull_id,
             source_rect: None,
             dest_size: None,
             layer: RenderLayer::Default,
@@ -110,7 +88,12 @@ async fn main() {
 
     // Loop
     loop {
-        let dt = get_frame_time();
+        let dt = if get_frame_time() > 1. {
+            1. / 60.
+        } else {
+            get_frame_time()
+        };
+
         clear_background(BLACK);
 
         // Control systems

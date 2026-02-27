@@ -24,8 +24,9 @@ pub fn render_system(world: &mut World) {
     sprites.sort_by(|(_, s1), (_, s2)| s1.layer.cmp(&s2.layer));
 
     for (transform, sprite) in sprites {
+        let tex = crate::asset_manager::get_texture(sprite.texture_id);
         draw_texture_ex(
-            &sprite.texture,
+            &tex,
             transform.position.x,
             transform.position.y,
             WHITE,

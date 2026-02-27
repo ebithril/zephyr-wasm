@@ -48,14 +48,14 @@ pub async fn load_level(
     let data: LevelData = from_str(&xml_str)?;
 
     // 1. Sky Background (Furthest)
-    let bg_tex = load_texture(&data.background.picture.replace("../", "")).await?;
+    let bg_id = crate::asset_manager::get_texture_ref(&data.background.picture.replace("../", ""));
     world.spawn((
         Transform {
             position: vec2(0.0, 0.0),
             rotation: 0.0,
         },
         Sprite {
-            texture: bg_tex,
+            texture_id: bg_id,
             source_rect: None,
             dest_size: Some(Vec2::new(8192., 8192.)),
             layer: RenderLayer::Background,
@@ -69,16 +69,18 @@ pub async fn load_level(
     ));
 
     // 2. Parallax Fix
-    /*if let Some(fix) = data.parallax_fix {
-        let tex = load_texture(&fix.picture.replace("../", "")).await?;
+    if let Some(fix) = data.parallax_fix {
+        let id = crate::asset_manager::get_texture_ref(&fix.picture.replace("../", ""));
         world.spawn((
             Transform {
                 position: vec2(0.0, 0.0),
                 rotation: 0.0,
             },
             Sprite {
-                texture: tex,
+                texture_id: id,
                 source_rect: None,
+                dest_size: None,
+                layer: RenderLayer::Parallax1,
             },
             Parallax {
                 relative_speed: 0.0,
@@ -92,7 +94,7 @@ pub async fn load_level(
     // 3. Parallax Background Layers (e.g. Clouds)
     if let Some(parallaxes) = data.parallaxes {
         for (i, layer) in parallaxes.layers.into_iter().enumerate() {
-            let tex = load_texture(&layer.texture.replace("../", "")).await?;
+            let id = crate::asset_manager::get_texture_ref(&layer.texture.replace("../", ""));
             // Map XML speed (drift) to Rust speed (scroll)
             // C++: 0.0 means Ground (1.0 scroll), 1.0 means Infinity (0.0 scroll)
             let rust_speed = 1.0 - layer.relative_speed;
@@ -102,8 +104,10 @@ pub async fn load_level(
                     rotation: 0.0,
                 },
                 Sprite {
-                    texture: tex,
+                    texture_id: id,
                     source_rect: None,
+                    dest_size: None,
+                    layer: RenderLayer::Parallax2,
                 },
                 Parallax {
                     relative_speed: rust_speed,
@@ -117,15 +121,17 @@ pub async fn load_level(
 
     // 4. Bottom Foreground (Map Floor)
     if let Some(fg) = data.bottom_foreground {
-        let tex = load_texture(&fg.picture.replace("../", "")).await?;
+        let id = crate::asset_manager::get_texture_ref(&fg.picture.replace("../", ""));
         world.spawn((
             Transform {
                 position: vec2(0.0, 8192.0 - 512.0),
                 rotation: 0.0,
             },
             Sprite {
-                texture: tex,
+                texture_id: id,
                 source_rect: None,
+                dest_size: None,
+                layer: RenderLayer::Foreground,
             },
             Parallax {
                 relative_speed: 1.0, // Ground speed
@@ -138,15 +144,17 @@ pub async fn load_level(
 
     // 5. Top Foreground
     if let Some(fg) = data.top_foreground {
-        let tex = load_texture(&fg.picture.replace("../", "")).await?;
+        let id = crate::asset_manager::get_texture_ref(&fg.picture.replace("../", ""));
         world.spawn((
             Transform {
                 position: vec2(0.0, 0.0),
                 rotation: 0.0,
             },
             Sprite {
-                texture: tex,
+                texture_id: id,
                 source_rect: None,
+                dest_size: None,
+                layer: RenderLayer::Foreground,
             },
             Parallax {
                 relative_speed: 1.0,
@@ -160,7 +168,7 @@ pub async fn load_level(
     // 6. Parallax Foreground Layers (Clouds above player)
     if let Some(foregrounds) = data.foregrounds {
         for (i, layer) in foregrounds.layers.into_iter().enumerate() {
-            let tex = load_texture(&layer.texture.replace("../", "")).await?;
+            let id = crate::asset_manager::get_texture_ref(&layer.texture.replace("../", ""));
             let rust_speed = 1.0 - layer.relative_speed; // e.g. 1.0 - (-0.6) = 1.6
             world.spawn((
                 Transform {
@@ -168,8 +176,10 @@ pub async fn load_level(
                     rotation: 0.0,
                 },
                 Sprite {
-                    texture: tex,
+                    texture_id: id,
                     source_rect: None,
+                    dest_size: None,
+                    layer: RenderLayer::Foreground,
                 },
                 Parallax {
                     relative_speed: rust_speed,
@@ -179,7 +189,9 @@ pub async fn load_level(
                 },
             ));
         }
-    }*/
+    }
+
+    crate::asset_manager::flush_queue().await;
 
     Ok(LevelSettings {
         gravity: data.gravity,

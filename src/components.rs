@@ -1,8 +1,11 @@
+use crate::asset_manager::AssetId;
 use macroquad::prelude::*;
 
 #[derive(PartialOrd, Ord, PartialEq, Eq)]
 pub enum RenderLayer {
     Background,
+    Parallax1,
+    Parallax2,
     Default,
     Foreground,
 }
@@ -15,7 +18,7 @@ pub struct Transform {
 pub struct Velocity(pub Vec2);
 
 pub struct Sprite {
-    pub texture: Texture2D,
+    pub texture_id: AssetId,
     pub source_rect: Option<Rect>,
     pub dest_size: Option<Vec2>,
     pub layer: RenderLayer,
