@@ -10,7 +10,7 @@ pub fn render_system(world: &mut World) {
         Camera2D::from_display_rect(Rect::new(0., 0., screen_width(), -screen_height()));
     camera.target = screen_mid;
     for game_camera in world.query_mut::<&GameCamera>() {
-        camera.target = game_camera.offset + screen_mid;
+        camera.target = game_camera.offset;
         break;
     }
 
