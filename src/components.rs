@@ -4,6 +4,7 @@ use macroquad::prelude::*;
 #[derive(PartialOrd, Ord, PartialEq, Eq)]
 pub enum RenderLayer {
     Background,
+    ParallaxFix,
     Parallax1,
     Parallax2,
     Default,

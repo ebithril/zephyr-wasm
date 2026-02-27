@@ -60,12 +60,6 @@ pub async fn load_level(
             dest_size: Some(Vec2::new(8192., 8192.)),
             layer: RenderLayer::Background,
         },
-        Parallax {
-            relative_speed: 1.0, // Fixed on screen
-            width: 8192.0,
-            height: 8192.0,
-            layer: -10,
-        },
     ));
 
     // 2. Parallax Fix
@@ -80,7 +74,7 @@ pub async fn load_level(
                 texture_id: id,
                 source_rect: None,
                 dest_size: None,
-                layer: RenderLayer::Parallax1,
+                layer: RenderLayer::ParallaxFix,
             },
             Parallax {
                 relative_speed: 0.0,
@@ -107,7 +101,11 @@ pub async fn load_level(
                     texture_id: id,
                     source_rect: None,
                     dest_size: None,
-                    layer: RenderLayer::Parallax2,
+                    layer: if i == 0 {
+                        RenderLayer::Parallax1
+                    } else {
+                        RenderLayer::Parallax2
+                    },
                 },
                 Parallax {
                     relative_speed: rust_speed,
