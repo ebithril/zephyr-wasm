@@ -8,12 +8,12 @@ pub fn ship_movement_system(world: &mut World, dt: f32, global_air_resistance: f
         &mut Velocity,
         &Engine,
         &Cockpit,
-        &ShipIntent,
+        &mut ShipIntent,
     )>() {
         transform.rotation += intent.rotation_input * engine.turn_rate * dt;
 
+        let dir = vec2(transform.rotation.sin(), -transform.rotation.cos());
         if intent.thrusting {
-            let dir = vec2(transform.rotation.sin(), -transform.rotation.cos());
             velocity.0 += dir * engine.acceleration * dt;
         }
 
@@ -25,6 +25,39 @@ pub fn ship_movement_system(world: &mut World, dt: f32, global_air_resistance: f
 
         if velocity.0.length() > engine.max_speed {
             velocity.0 = velocity.0.normalize() * engine.max_speed;
+        }
+
+        let mut delta_vector = velocity.0 * dt;
+
+        let next_position = delta_vector + transform.position;
+
+        if next_position.y > 8000. {
+            velocity.0.y *= -1.;
+
+            velocity.0.y *= 0.5;
+
+            if velocity.0.y < 10. {
+                velocity.0.y -= 250.;
+            }
+
+            delta_vector = velocity.0 * dt;
+
+            let velocity_heading = delta_vector.x.atan2(delta_vector.y);
+            let ship_heading = dir.x.atan2(dir.y);
+
+            transform.rotation = ship_heading - velocity_heading;
+
+            //nextPosition = deltaVector + mySpace.GetPosition();
+        } else if next_position.y < 1000. {
+            intent.thrusting = false; // TODO: This won't work atm but signals intent
+
+            if next_position.y < -50. {
+                velocity.0.y += 0.2;
+            }
+
+            delta_vector = velocity.0 * dt;
+
+            //nextPosition = deltaVector + mySpace.GetPosition();
         }
     }
 }
