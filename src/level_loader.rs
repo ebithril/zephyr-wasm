@@ -73,7 +73,7 @@ pub async fn load_level(
             Sprite {
                 texture_id: id,
                 source_rect: None,
-                dest_size: None,
+                dest_size: Some(Vec2::new(8192., 8192.)),
                 layer: RenderLayer::ParallaxFix,
             },
             Parallax {
@@ -100,7 +100,7 @@ pub async fn load_level(
                 Sprite {
                     texture_id: id,
                     source_rect: None,
-                    dest_size: None,
+                    dest_size: Some(Vec2::new(8192., 8192.)),
                     layer: if i == 0 {
                         RenderLayer::Parallax1
                     } else {
@@ -176,7 +176,7 @@ pub async fn load_level(
                 Sprite {
                     texture_id: id,
                     source_rect: None,
-                    dest_size: None,
+                    dest_size: Some(Vec2::new(8192., 8192.)),
                     layer: RenderLayer::Foreground,
                 },
                 Parallax {
