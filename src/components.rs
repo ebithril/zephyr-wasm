@@ -109,6 +109,9 @@ pub struct GameCamera {
     pub screen_width: f32,
     pub screen_height: f32,
     pub smoothing: f32,
+    pub current_shake_length: f32,
+    pub shake_length: f32,
+    pub shake_magnitude: f32,
 }
 
 pub struct Parallax {

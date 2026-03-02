@@ -32,6 +32,17 @@ pub fn camera_system(world: &mut World, dt: f32) {
             5. * dt,
         );
 
+        camera.current_shake_length += dt;
+
+        if camera.current_shake_length < camera.shake_length {
+            let mut shake = vec2(0., 0.);
+
+            shake.x = rand::gen_range(-camera.shake_magnitude, camera.shake_magnitude);
+            shake.y = rand::gen_range(-camera.shake_magnitude, camera.shake_magnitude);
+
+            camera.offset += shake;
+        }
+
         let half_screen_height = screen_height() / 2.;
         if camera.offset.y - half_screen_height < 0. {
             camera.offset.y = half_screen_height;

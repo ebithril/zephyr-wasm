@@ -84,6 +84,9 @@ async fn main() {
         screen_width: screen_width(),
         screen_height: screen_height(),
         smoothing: 5.0,
+        current_shake_length: 0.,
+        shake_length: 0.,
+        shake_magnitude: 0.,
     },));
 
     // Loop
